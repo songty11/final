@@ -2,7 +2,7 @@ User
   name: text
   email: text
   password: text
-  
+
 Album
   title: text
   image_url: text
@@ -10,15 +10,15 @@ Album
   year: integer
   description: text
   singer_id: integer
-  Composer_id: integer
   comment: text
-  
+
 Song
   name: text
   runtime: integer
   lyrics: text
   album_id: integer
   singer_id: integer
+  Composer_id: integer
 
 Singer
   name: text
