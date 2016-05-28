@@ -1,12 +1,11 @@
 User
   name: text
   email: text
-  password: text
+  password_digest: text
 
 Album
   title: text
   image_url: text
-  price: integer
   year: integer
   description: text
   singer_id: integer
@@ -15,14 +14,15 @@ Album
 Song
   name: text
   runtime: integer
-  lyrics: text
   album_id: integer
-  singer_id: integer
-  Composer_id: integer
+  artist_id: integer
+  preview_url: text
 
-Singer
+Artist
   name: text
   photo_url: text
 
-Composer
-  name: text
+Review
+  content: text
+  album_id
+  user_id
