@@ -7,7 +7,6 @@ Album
   title: text
   image_url: text
   year: integer
-  description: text
   singer_id: integer
   comment: text
 

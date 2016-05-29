@@ -1,0 +1,21 @@
+<!-- app/views/artists/show.html.erb -->
+<h1 class="page-header"><%= @album.name %>
+<!--   <small>
+    <%= link_to "Add this album", album_path(@album.id),:method => :create %>
+  </small> -->
+</h1>
+  <p><%= image_tag @album.images[1]['url'], class: 'pull-right' %></p>
+
+  <p><strong>Artist: </strong>
+    <%= link_to @album.artists[0].name, "/" %>
+  </p>
+
+  <p><strong>Released:</strong> <%= @album.release_date%></p>
+  <p><strong>Tracks: </strong></p>
+ <ul>
+   <% @album.tracks.each do |track| %>
+     <li>
+       <%= track.name %>
+     </li>
+   <% end %>
+ </ul>

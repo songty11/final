@@ -1,0 +1,16 @@
+<div class="details">
+
+  <p><%= image_tag @album.image_url, class: 'pull-right' %></p>
+
+  <p><strong>Artist: </strong>
+    <%= link_to @album.artist.name, "/" %>
+  </p>
+
+  <p><strong>Released:</strong> <%= @album.year %></p>
+  <p><strong>Tracks: </strong></p>
+  <ul>
+    <% @album.songs.each do |song| %>
+      <li><%= link_to song.name, "/song/#{song.id}" %></li>
+    <% end %>
+  </ul>
+</div>
