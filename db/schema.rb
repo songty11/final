@@ -48,14 +48,6 @@ ActiveRecord::Schema.define(version: 0) do
   add_index "songs", ["album_id"], name: "index_songs_on_album_id"
   add_index "songs", ["artist_id"], name: "index_songs_on_artist_id"
 
-  create_table "tracks", force: :cascade do |t|
-    t.integer "song_id"
-    t.integer "album_id"
-  end
-
-  add_index "tracks", ["album_id"], name: "index_tracks_on_album_id"
-  add_index "tracks", ["song_id"], name: "index_tracks_on_song_id"
-
   create_table "users", force: :cascade do |t|
     t.text "name"
     t.text "email"

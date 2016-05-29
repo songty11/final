@@ -31,7 +31,6 @@ skip_before_filter :verify_authenticity_token, :only => :create
 	    	mtracks.each do |song|
 	    		@newsong = Song.new(name: song.name, runtime:song.duration_ms, album_id: @album.id, artist_id: artist.id, preview_url: song.preview_url)
 	    		@newsong.save
-	    		Track.create(song_id: @newsong.id, album_id:@album.id)
 	   		 end
 	      redirect_to albums_url, notice: "Album added! Thanks!"
 	    else

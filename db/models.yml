@@ -25,7 +25,3 @@ Review
   content: text
   album_id
   user_id
-
-Track
-  song_id: integer
-  album_id: integer
