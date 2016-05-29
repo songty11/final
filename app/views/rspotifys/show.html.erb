@@ -1,0 +1,31 @@
+<!-- app/views/artists/show.html.erb -->
+<h1 class="page-header"><%= @album.name %>
+<small>
+
+
+    <!-- <%= link_to "Add This Album", album_path(@album.id)%> -->
+</small>
+</h1>
+  <p><%= image_tag @album.images[1]['url'], class: 'pull-right' %></p>
+
+  <p><strong>Artist: </strong>
+    <%= link_to @album.artists[0].name, "/" %>
+  </p>
+
+  <p><strong>Released:</strong> <%= @album.release_date%></p>
+  <p><strong>Tracks: </strong></p>
+ <ul>
+   <% @album.tracks.each do |track| %>
+     <li>
+       <%= track.name %>
+     </li>
+   <% end %>
+ </ul>
+ <form action="/albums" method="post">
+  <input name="title" type="hidden" value= "<%=@album.name%>" />
+  <input name="image_url" type="hidden" value= "<%=@album.images[1]['url']%>" />
+  <input name="year" type="hidden" value= "<%= @album.release_date%>" />
+  <input name="artist" type="hidden" value= "<%= @album.artists[0].name%>" /> 
+  <input name="spotifyid" type="hidden" value= "<%= @album.id%>" /> 
+  <input name="Add This Album" type="submit" value="Add This Album" />
+</form>

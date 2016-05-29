@@ -1,7 +1,7 @@
 <h1>Add a New Album</h1>
 
 
-<%= form_tag '/spotify/new', method: "get", html: { class: "form" } do %>
+<%= form_tag '/rspotifys', method: "get", html: { class: "form" } do %>
  <div class="form-group col-xs-4">
    <%= text_field_tag(:album_name, "", placeholder: "Enter album name", class: "form-control") %>
  </div>
@@ -12,7 +12,7 @@
 <h2 class="page-header">Albums Matching <%= params[:album_name] %></h2>
 <ul>
  <% @album.each do |album| %>
-<%= link_to image_tag(album.images[1]['url']), album_path(album.id) %>
+<%= link_to image_tag(album.images[1]['url']), rspotify_path(album.id) %>
  <% end %>
 </ul>
 <%end%>

@@ -7,7 +7,7 @@ Album
   title: text
   image_url: text
   year: integer
-  singer_id: integer
+  artist_id: integer
   comment: text
 
 Song
@@ -25,3 +25,7 @@ Review
   content: text
   album_id
   user_id
+
+Track
+  song_id: integer
+  album_id: integer
