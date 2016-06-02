@@ -1,9 +1,9 @@
 <!-- app/views/artists/show.html.erb -->
 <h1 class="page-header"><%= @album.name %>
-<small>
-
-
-</small>
+<script>
+  var player = document.createElement('AUDIO');
+  var isPlaying = false;
+</script>
 </h1>
   <p><%= image_tag @album.images[1]['url'], class: 'pull-right' %></p>
 
@@ -15,15 +15,14 @@
   <p><strong>Tracks: </strong></p>
  <ul>
    <% @album.tracks.each do |track| %>
-     <li>
-       
-        <label class="audioplay au-<%= track.id %>" data-audiofile="<%=track.preview_url%>"> 
+     <li class="track-list">
+        <a hr="#" class="audioplay au-<%= track.id %>" data-audiofile="<%=track.preview_url%>"> 
       <%= track.name %>
-      </label>
-     </button>
+      </a>
      </li>
    <% end %>
  </ul>
+ <hr>
  <form action="/albums" method="post">
   <input name="title" type="hidden" value= "<%=@album.name%>" />
   <input name="image_url" type="hidden" value= "<%=@album.images[1]['url']%>" />
@@ -37,8 +36,17 @@
   $(".audioplay").on("click", function(){
     
      var source = $(this).data("audiofile");
-     var player = document.createElement('AUDIO');
-     player.src = source
-     player.play();
+     if(player.src == source && isPlaying)
+     {
+      player.pause();
+      isPlaying = false;
+     }
+     else
+     {
+      player.src = source
+      player.play();
+      isPlaying = true;
+     }
+     
   });
 </script>

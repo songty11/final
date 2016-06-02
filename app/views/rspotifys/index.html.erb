@@ -15,7 +15,7 @@
 
 <ul>
  <% @album.each do |album| %>
- <div class='spotify-box'>
+ <div class='spotify-box '>
 <%= link_to image_tag(album.images[1]['url']), rspotify_path(album.id) %>
 <h4><%= link_to album.name, rspotify_path(album.id) %></h4>
 </div>

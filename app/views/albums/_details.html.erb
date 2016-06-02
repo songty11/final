@@ -10,7 +10,7 @@
   <p><strong>Tracks: </strong></p>
   <ul>
     <% @album.songs.each do |song| %>
-      <li><%= link_to song.name, song_path(song.id) %></li>
+        <li class="track-list"><%= link_to song.name, song_path(song.id) %></li>
     <% end %>
   </ul>
 </div>
