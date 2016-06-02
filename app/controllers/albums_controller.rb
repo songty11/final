@@ -47,7 +47,8 @@ skip_before_filter :verify_authenticity_token, :only => :create
 	end
 
 	def destroy
-
+		Album.delete(params[:id])
+    	redirect_to albums_url
 	end
 
 

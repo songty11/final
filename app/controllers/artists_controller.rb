@@ -1,14 +1,12 @@
 class ArtistsController < ApplicationController
 
   def index
-    if params[:artist_name]!=nil
-     @artists = RSpotify::Artist.search(params[:artist_name])
-   else
-     redirect_to albums_url
-   end
+     @artists = Artist.all
+     @artists = @artists.limit(50)
   end
 
   def show
+     @artist = Artist.find_by(id: params[:id])
   end
 
   def new
@@ -25,6 +23,10 @@ class ArtistsController < ApplicationController
   end
 
   def destroy
+    if @artists
+      @artists.delete
+    end
+    redirect_to albums_url
   end
   
 end

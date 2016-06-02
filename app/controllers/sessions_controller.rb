@@ -13,10 +13,8 @@ class SessionsController < ApplicationController
         redirect_to albums_url
         return
       else
-        # Email is ok, but password was wrong
       end
     else
-      # Email is unknown
     end
     redirect_to login_url, notice: "Invalid email or password"
   end

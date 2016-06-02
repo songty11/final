@@ -1,4 +1,9 @@
 <!-- app/views/artists/show.html.erb -->
-<h1 class="page-header"><%= @album.title %>
+<h1 class="page-header"><%= @album.title%>
+
+
 </h1>
+
 <%= render 'details' %>
+
+<%=button_to "Delete",album_path(@album.id),:method => :delete, :class=>"btn btn-sm btn-danger pull-middle"%>

@@ -1,1 +1,65 @@
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+.album-selections {
+  /*width: 70%;*/
+  text-align: center;
+}
+.album-box {
+  float: left;
+  width: 280px;
+  height: 280px;
+  padding: 20px;
+  padding-left: 0px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.album-box img {
+  text-align: center;
+  margin: auto auto;
+  display: block;
+  box-shadow: 8px 8px 8px #999;
+  width: 230px;
+  height: 230px;
+}
+.spotify-box {
+  float: left;
+  width: 310px;
+  height: 350px;
+  padding: 20px;
+  padding-left: 0px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spotify-box img {
+  text-align: center;
+  margin: auto auto;
+  display: block;
+  width: 300px;
+  height: 300px;
+}
+
+body {
+    padding-top: 55px;
+  }
+
+.sign-in-up .right-inner-addon {
+    position: relative;
+}
+
+.sign-in-up .right-inner-addon input {
+    padding-right: 30px;
+}
+
+.sign-in-up .right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 17px 12px;
+    pointer-events: none;
+}
+

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :artists
   resources :users
   resources :rspotifys
+  resources :songs
 
   get '/artists', to: 'artists#index'
   get '/login' => 'sessions#new'

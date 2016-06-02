@@ -3,7 +3,6 @@
 <small>
 
 
-    <!-- <%= link_to "Add This Album", album_path(@album.id)%> -->
 </small>
 </h1>
   <p><%= image_tag @album.images[1]['url'], class: 'pull-right' %></p>
@@ -17,7 +16,11 @@
  <ul>
    <% @album.tracks.each do |track| %>
      <li>
-       <%= track.name %>
+       
+        <label class="audioplay au-<%= track.id %>" data-audiofile="<%=track.preview_url%>"> 
+      <%= track.name %>
+      </label>
+     </button>
      </li>
    <% end %>
  </ul>
@@ -29,3 +32,13 @@
   <input name="spotifyid" type="hidden" value= "<%= @album.id%>" /> 
   <input name="Add This Album" type="submit" value="Add This Album" class="btn btn-primary" />
 </form>
+
+<script>
+  $(".audioplay").on("click", function(){
+    
+     var source = $(this).data("audiofile");
+     var player = document.createElement('AUDIO');
+     player.src = source
+     player.play();
+  });
+</script>
