@@ -34996,3 +34996,444 @@ Started GET "/assets/add_new-0d09eff6aa3a5b4a2eecc9b16ae5f1462d41f684653b111dba4
 
 
 Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-01 17:23:21 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "albums"
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "artists"[0m
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM "songs"
+  [1m[36mSQL (1.1ms)[0m  [1mDELETE FROM "reviews"[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "users"
+
+
+Started GET "/albums" for ::1 at 2016-06-01 17:27:16 -0500
+Processing by AlbumsController#index as HTML
+  Rendered albums/_album.html.erb (156.3ms)
+  [1m[36mAlbum Load (1.0ms)[0m  [1mSELECT  "albums".* FROM "albums" LIMIT 100[0m
+  Rendered collection (0.0ms)
+  Rendered albums/index.html.erb within layouts/application (165.4ms)
+Completed 200 OK in 224ms (Views: 196.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-0b94d0b2a423cba205a7d6f879a82ad9d3458c979bb173549670d9f3f325e77a.css?body=1" for ::1 at 2016-06-01 17:27:17 -0500
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for ::1 at 2016-06-01 17:27:17 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-01 17:27:17 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-06-01 17:27:17 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-01 17:27:17 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-01 17:27:17 -0500
+
+
+Started GET "/assets/add_new-0d09eff6aa3a5b4a2eecc9b16ae5f1462d41f684653b111dba4d44d6c650d1bf.png" for ::1 at 2016-06-01 17:27:17 -0500
+
+
+Started GET "/albums/new" for ::1 at 2016-06-01 17:27:17 -0500
+Processing by AlbumsController#new as HTML
+Redirected to http://localhost:3000/rspotifys
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rspotifys" for ::1 at 2016-06-01 17:27:17 -0500
+Processing by RspotifysController#index as HTML
+  Rendered rspotifys/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rspotifys?utf8=%E2%9C%93&album_name=hello&commit=Search+on+spotify" for ::1 at 2016-06-01 17:27:23 -0500
+Processing by RspotifysController#index as HTML
+  Parameters: {"utf8"=>"✓", "album_name"=>"hello", "commit"=>"Search on spotify"}
+  Rendered rspotifys/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 1302ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rspotifys/1Eo1pg2D4beFgf3HFTJTMc" for ::1 at 2016-06-01 17:27:32 -0500
+Processing by RspotifysController#show as HTML
+  Parameters: {"id"=>"1Eo1pg2D4beFgf3HFTJTMc"}
+  Rendered rspotifys/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 340ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rspotifys/1Eo1pg2D4beFgf3HFTJTMc" for ::1 at 2016-06-01 17:28:31 -0500
+Processing by RspotifysController#show as HTML
+  Parameters: {"id"=>"1Eo1pg2D4beFgf3HFTJTMc"}
+  Rendered rspotifys/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 870ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-0b94d0b2a423cba205a7d6f879a82ad9d3458c979bb173549670d9f3f325e77a.css?body=1" for ::1 at 2016-06-01 17:28:32 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-01 17:28:32 -0500
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for ::1 at 2016-06-01 17:28:32 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-01 17:28:32 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-01 17:28:32 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-06-01 17:28:32 -0500
+
+
+Started GET "/rspotifys/1Eo1pg2D4beFgf3HFTJTMc" for ::1 at 2016-06-01 17:29:29 -0500
+Processing by RspotifysController#show as HTML
+  Parameters: {"id"=>"1Eo1pg2D4beFgf3HFTJTMc"}
+  Rendered rspotifys/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 377ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-0b94d0b2a423cba205a7d6f879a82ad9d3458c979bb173549670d9f3f325e77a.css?body=1" for ::1 at 2016-06-01 17:29:30 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-01 17:29:30 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-01 17:29:30 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-06-01 17:29:30 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-01 17:29:30 -0500
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for ::1 at 2016-06-01 17:29:30 -0500
+
+
+Started POST "/albums" for ::1 at 2016-06-01 17:29:35 -0500
+Processing by AlbumsController#create as HTML
+  Parameters: {"title"=>"Hello", "image_url"=>"https://i.scdn.co/image/f71517e8919892273de8d8677e42cdcf1b976aa7", "year"=>"2015-10-23", "artist"=>"Adele", "spotifyid"=>"1Eo1pg2D4beFgf3HFTJTMc", "Add This Album"=>"Add This Album"}
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Adele"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "artists" ("name") VALUES (?)  [["name", "Adele"]]
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "albums" ("title", "image_url", "year", "artist_id") VALUES (?, ?, ?, ?)[0m  [["title", "Hello"], ["image_url", "https://i.scdn.co/image/f71517e8919892273de8d8677e42cdcf1b976aa7"], ["year", 2015], ["artist_id", 9]]
+  [1m[35m (0.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("name", "runtime", "album_id", "artist_id", "preview_url") VALUES (?, ?, ?, ?, ?)  [["name", "Hello"], ["runtime", 295493], ["album_id", 13], ["artist_id", 9], ["preview_url", "https://p.scdn.co/mp3-preview/0b90429fd554bad6785faa2b8931d613db4a0ee4"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/albums
+Completed 302 Found in 846ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/albums" for ::1 at 2016-06-01 17:29:36 -0500
+Processing by AlbumsController#index as HTML
+  Rendered albums/_album.html.erb (1.2ms)
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT  "albums".* FROM "albums" LIMIT 100
+  Rendered albums/_album.html.erb (0.7ms)
+  Rendered albums/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/albums/new" for ::1 at 2016-06-01 17:29:38 -0500
+Processing by AlbumsController#new as HTML
+Redirected to http://localhost:3000/rspotifys
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rspotifys" for ::1 at 2016-06-01 17:29:38 -0500
+Processing by RspotifysController#index as HTML
+  Rendered rspotifys/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 17ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rspotifys?utf8=%E2%9C%93&album_name=sugar&commit=Search+on+spotify" for ::1 at 2016-06-01 17:29:43 -0500
+Processing by RspotifysController#index as HTML
+  Parameters: {"utf8"=>"✓", "album_name"=>"sugar", "commit"=>"Search on spotify"}
+  Rendered rspotifys/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 715ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rspotifys/5XyJzEROSmup2TcWmVjTIt" for ::1 at 2016-06-01 17:29:50 -0500
+Processing by RspotifysController#show as HTML
+  Parameters: {"id"=>"5XyJzEROSmup2TcWmVjTIt"}
+  Rendered rspotifys/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 451ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/albums" for ::1 at 2016-06-01 17:29:52 -0500
+Processing by AlbumsController#create as HTML
+  Parameters: {"title"=>"SUGAR", "image_url"=>"https://i.scdn.co/image/53fea48ae7ad87d8dea8fbf28ba2573b8a332a11", "year"=>"2015-09-25", "artist"=>"Robin Schulz", "spotifyid"=>"5XyJzEROSmup2TcWmVjTIt", "Add This Album"=>"Add This Album"}
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1[0m  [["name", "Robin Schulz"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "artists" ("name") VALUES (?)[0m  [["name", "Robin Schulz"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "albums" ("title", "image_url", "year", "artist_id") VALUES (?, ?, ?, ?)  [["title", "SUGAR"], ["image_url", "https://i.scdn.co/image/53fea48ae7ad87d8dea8fbf28ba2573b8a332a11"], ["year", 2015], ["artist_id", 10]]
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "songs" ("name", "runtime", "album_id", "artist_id", "preview_url") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Headlights (feat. Ilsey)"], ["runtime", 209208], ["album_id", 14], ["artist_id", 10], ["preview_url", "https://p.scdn.co/mp3-preview/3da874902a1076518f0d53347dd9638b154339e5"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("name", "runtime", "album_id", "artist_id", "preview_url") VALUES (?, ?, ?, ?, ?)  [["name", "Sugar (feat. Francesco Yates)"], ["runtime", 219043], ["album_id", 14], ["artist_id", 10], ["preview_url", "https://p.scdn.co/mp3-preview/c4b6941542e99f1a0cf480d6b1ed033be783a3fa"]]
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("name", "runtime", "album_id", "artist_id", "preview_url") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Heatwave (feat. Akon)"], ["runtime", 187126], ["album_id", 14], ["artist_id", 10], ["preview_url", "https://p.scdn.co/mp3-preview/795e64c46846be6fb7e1eac86ca479454f24bd3d"]]
+  [1m[35m (0.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("name", "runtime", "album_id", "artist_id", "preview_url") VALUES (?, ?, ?, ?, ?)  [["name", "Yellow"], ["runtime", 216409], ["album_id", 14], ["artist_id", 10], ["preview_url", "https://p.scdn.co/mp3-preview/9ae427605e9034bf0d651530a8b9780867fcd1de"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("name", "runtime", "album_id", "artist_id", "preview_url") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Show Me Love"], ["runtime", 255959], ["album_id", 14], ["artist_id", 10], ["preview_url", "https://p.scdn.co/mp3-preview/d4b95890a9057ef49c173ecb6661343284cda3a9"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("name", "runtime", "album_id", "artist_id", "preview_url") VALUES (?, ?, ?, ?, ?)  [["name", "Love Me Loud (feat. Aleesia)"], ["runtime", 215478], ["album_id", 14], ["artist_id", 10], ["preview_url", "https://p.scdn.co/mp3-preview/d77bcb6397a2a5c25a681b4beb6efe5f05eba77d"]]
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("name", "runtime", "album_id", "artist_id", "preview_url") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Pride"], ["runtime", 184614], ["album_id", 14], ["artist_id", 10], ["preview_url", "https://p.scdn.co/mp3-preview/dcf889a3a42447f1e0a38f526dfca392ee974484"]]
+  [1m[35m (0.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("name", "runtime", "album_id", "artist_id", "preview_url") VALUES (?, ?, ?, ?, ?)  [["name", "Find Me"], ["runtime", 198239], ["album_id", 14], ["artist_id", 10], ["preview_url", "https://p.scdn.co/mp3-preview/e5bb5dbafc072fb62d431d19745aa412e0f47229"]]
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("name", "runtime", "album_id", "artist_id", "preview_url") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Titanic"], ["runtime", 219540], ["album_id", 14], ["artist_id", 10], ["preview_url", "https://p.scdn.co/mp3-preview/0837f84933658fc038092d0661acfd5f386caf0f"]]
+  [1m[35m (0.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("name", "runtime", "album_id", "artist_id", "preview_url") VALUES (?, ?, ?, ?, ?)  [["name", "This Is Your Life"], ["runtime", 207402], ["album_id", 14], ["artist_id", 10], ["preview_url", "https://p.scdn.co/mp3-preview/b33de7c3ecb6d1e181a487266458c866e38f7a4d"]]
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("name", "runtime", "album_id", "artist_id", "preview_url") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Save Tonight (feat. Solamay)"], ["runtime", 216933], ["album_id", 14], ["artist_id", 10], ["preview_url", "https://p.scdn.co/mp3-preview/64b27bfbdabce51c6c3df5b70c6fb6798e21e109"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("name", "runtime", "album_id", "artist_id", "preview_url") VALUES (?, ?, ?, ?, ?)  [["name", "4 Life (feat. Graham Candy)"], ["runtime", 195474], ["album_id", 14], ["artist_id", 10], ["preview_url", "https://p.scdn.co/mp3-preview/f683d80203d25c1e72f716bb698ffcd969c4274a"]]
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("name", "runtime", "album_id", "artist_id", "preview_url") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Wave Goodbye (feat. Jeffrey Jey)"], ["runtime", 195112], ["album_id", 14], ["artist_id", 10], ["preview_url", "https://p.scdn.co/mp3-preview/768e7fbf5bbff6a79b2cba6e4d52ed058377ff1a"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("name", "runtime", "album_id", "artist_id", "preview_url") VALUES (?, ?, ?, ?, ?)  [["name", "World Turns Grey (feat. Princess Chelsea)"], ["runtime", 232116], ["album_id", 14], ["artist_id", 10], ["preview_url", "https://p.scdn.co/mp3-preview/0473b26531c3eb720b892c26abc7a69665d2cd92"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("name", "runtime", "album_id", "artist_id", "preview_url") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Moonlit Sky (with The Void Pacific Choir)"], ["runtime", 248344], ["album_id", 14], ["artist_id", 10], ["preview_url", "https://p.scdn.co/mp3-preview/d5853791de1efd246ee14825ef727cf2d26cc8f7"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/albums
+Completed 302 Found in 343ms (ActiveRecord: 14.9ms)
+
+
+Started GET "/albums" for ::1 at 2016-06-01 17:29:52 -0500
+Processing by AlbumsController#index as HTML
+  Rendered albums/_album.html.erb (0.8ms)
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT  "albums".* FROM "albums" LIMIT 100[0m
+  Rendered albums/_album.html.erb (0.3ms)
+  Rendered albums/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/albums/14" for ::1 at 2016-06-01 17:31:11 -0500
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mSong Load (0.1ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."album_id" = ?  [["album_id", 14]]
+  Rendered albums/_details.html.erb (14.5ms)
+  Rendered albums/show.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/albums/14" for ::1 at 2016-06-01 17:31:16 -0500
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 10]]
+  [1m[36mSong Load (0.1ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."album_id" = ?[0m  [["album_id", 14]]
+  Rendered albums/_details.html.erb (1.7ms)
+  Rendered albums/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/song/101" for ::1 at 2016-06-01 17:31:17 -0500
+
+ActionController::RoutingError (No route matches [GET] "/song/101"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.6ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (74.4ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (44.4ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (94.2ms)
+
+
+Started GET "/song/101" for ::1 at 2016-06-01 17:31:17 -0500
+
+ActionController::RoutingError (No route matches [GET] "/song/101"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.8ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (65.1ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.9ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/sTian/.rbenv/versions/2.2.3/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (84.6ms)
+
+
+Started GET "/albums/14" for ::1 at 2016-06-01 17:31:19 -0500
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mSong Load (0.1ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."album_id" = ?  [["album_id", 14]]
+  Rendered albums/_details.html.erb (3.5ms)
+  Rendered albums/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/albums" for ::1 at 2016-06-01 17:31:53 -0500
+Processing by AlbumsController#index as HTML
+  Rendered albums/_album.html.erb (1.7ms)
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT  "albums".* FROM "albums" LIMIT 100[0m
+  Rendered albums/_album.html.erb (0.8ms)
+  Rendered albums/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 24ms (Views: 23.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/albums?utf8=%E2%9C%93&artist_name=hello" for ::1 at 2016-06-01 17:31:55 -0500
+Processing by AlbumsController#index as HTML
+  Parameters: {"utf8"=>"✓", "artist_name"=>"hello"}
+  Rendered albums/_album.html.erb (0.7ms)
+  [1m[35mAlbum Load (0.1ms)[0m  SELECT  "albums".* FROM "albums" LIMIT 100
+  Rendered albums/_album.html.erb (0.3ms)
+  Rendered albums/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/albums/13" for ::1 at 2016-06-01 17:34:38 -0500
+Processing by AlbumsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mAlbum Load (0.1ms)[0m  [1mSELECT  "albums".* FROM "albums" WHERE "albums"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mSong Load (0.1ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."album_id" = ?[0m  [["album_id", 13]]
+  Rendered albums/_details.html.erb (1.3ms)
+  Rendered albums/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2016-06-01 19:20:08 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 39ms (Views: 33.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2016-06-01 19:20:57 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-0b94d0b2a423cba205a7d6f879a82ad9d3458c979bb173549670d9f3f325e77a.css?body=1" for ::1 at 2016-06-01 19:20:57 -0500
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-01 19:20:57 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-01 19:20:57 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-01 19:20:57 -0500
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for ::1 at 2016-06-01 19:20:57 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-06-01 19:20:57 -0500
+
+
+Started GET "/users/new" for ::1 at 2016-06-01 19:31:01 -0500
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 30ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-06-01 19:31:01 -0500
+
+
+Started GET "/assets/application.self-0b94d0b2a423cba205a7d6f879a82ad9d3458c979bb173549670d9f3f325e77a.css?body=1" for ::1 at 2016-06-01 19:31:01 -0500
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for ::1 at 2016-06-01 19:31:01 -0500
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-06-01 19:31:01 -0500
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-06-01 19:31:01 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-01 19:31:01 -0500
