@@ -43,10 +43,36 @@
   width: 300px;
   height: 300px;
 }
+.artist-box {
+  float: left;
+  width: 260px;
+  height: 280px;
+  padding: 20px;
+  padding-left: 0px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.artist-box img {
+  text-align: center;
+  margin: auto auto;
+  display: block;
+  width: 230px;
+  height: 230px;
+}
+
+
 
 body {
     padding-top: 55px;
   }
+
+.sidebar
+{
+  padding: 20px;
+  background-color: #e6e6e6;
+}
 
 .track-list{
   font-weight:bold;
@@ -66,4 +92,18 @@ body {
     padding: 17px 12px;
     pointer-events: none;
 }
-
+.artist-album{
+  
+}
+.artist-photo{
+  padding:20px;
+  text-align: center;
+  margin: auto auto;
+  display: block;
+  width: 230px;
+  height: 230px;
+}
+.btn-delete{
+   position: relative;
+   top :55px;
+}

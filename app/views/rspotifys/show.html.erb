@@ -4,6 +4,7 @@
   var player = document.createElement('AUDIO');
   var isPlaying = false;
 </script>
+
 </h1>
   <p><%= image_tag @album.images[1]['url'], class: 'pull-right' %></p>
 
@@ -11,25 +12,36 @@
     <%= link_to @album.artists[0].name, "/" %>
   </p>
 
-  <p><strong>Released:</strong> <%= @album.release_date%></p>
-  <p><strong>Tracks: </strong></p>
+  <p><strong>Released: </strong> <%= @album.release_date%></p>
+  <p><strong>Popularity: </strong> <%= @album.popularity%></p>
+  <p><strong>Type: </strong> <%= @album.album_type%></p>
+  <p><strong>Tracks: </strong>
  <ul>
+ <%total_tracks=0%>
    <% @album.tracks.each do |track| %>
      <li class="track-list">
         <a hr="#" class="audioplay au-<%= track.id %>" data-audiofile="<%=track.preview_url%>"> 
       <%= track.name %>
+       <%total_tracks=total_tracks+1%>
       </a>
      </li>
    <% end %>
  </ul>
+
+
  <hr>
+
  <form action="/albums" method="post">
   <input name="title" type="hidden" value= "<%=@album.name%>" />
   <input name="image_url" type="hidden" value= "<%=@album.images[1]['url']%>" />
   <input name="year" type="hidden" value= "<%= @album.release_date%>" />
   <input name="artist" type="hidden" value= "<%= @album.artists[0].name%>" /> 
   <input name="spotifyid" type="hidden" value= "<%= @album.id%>" /> 
-  <input name="Add This Album" type="submit" value="Add This Album" class="btn btn-primary" />
+  <input name="artist_sid" type="hidden" value= "<%= @album.artists[0].id%>" />
+  <input name="popularity" type="hidden" value= "<%= @album.popularity%>" />
+  <input name="total_tracks" type="hidden" value= "<%= total_tracks%>" />
+  <input name="album_type" type="hidden" value= "<%= @album.album_type%>" />
+  <input name="Add This Album" type="submit" value="Add This Album" class="btn btn-success" />
 </form>
 
 <script>

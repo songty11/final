@@ -4,20 +4,26 @@ User
   password_digest: text
 
 Album
+  spotify_id: text
   title: text
   image_url: text
-  year: integer
+  year: text
   artist_id: integer
-  comment: text
+  album_type: text
+  popularity: integer
+  total_tracks: integer
+
 
 Song
   name: text
   runtime: integer
   album_id: integer
   artist_id: integer
+  popularity: integer
   preview_url: text
 
 Artist
+  spotify_id: text
   name: text
   photo_url: text
 
@@ -25,3 +31,8 @@ Review
   content: text
   album_id
   user_id
+
+Toptrack
+  name: text
+  preview_url: text
+  artist_id: integer

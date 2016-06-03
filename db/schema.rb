@@ -16,17 +16,24 @@ ActiveRecord::Schema.define(version: 0) do
   create_table "albums", force: :cascade do |t|
     t.text    "title"
     t.text    "image_url"
-    t.integer "year"
-    t.text    "comment"
+    t.text    "year"
     t.integer "artist_id"
+    t.text    "spotify_id"
+    t.text    "album_type"
+    t.integer "popularity"
+    t.integer "total_tracks"
   end
 
   add_index "albums", ["artist_id"], name: "index_albums_on_artist_id"
+  add_index "albums", ["spotify_id"], name: "index_albums_on_spotify_id"
 
   create_table "artists", force: :cascade do |t|
     t.text "name"
     t.text "photo_url"
+    t.text "spotify_id"
   end
+
+  add_index "artists", ["spotify_id"], name: "index_artists_on_spotify_id"
 
   create_table "reviews", force: :cascade do |t|
     t.text    "content"
@@ -43,10 +50,19 @@ ActiveRecord::Schema.define(version: 0) do
     t.integer "album_id"
     t.integer "artist_id"
     t.text    "preview_url"
+    t.integer "popularity"
   end
 
   add_index "songs", ["album_id"], name: "index_songs_on_album_id"
   add_index "songs", ["artist_id"], name: "index_songs_on_artist_id"
+
+  create_table "toptracks", force: :cascade do |t|
+    t.text    "name"
+    t.text    "preview_url"
+    t.integer "artist_id"
+  end
+
+  add_index "toptracks", ["artist_id"], name: "index_toptracks_on_artist_id"
 
   create_table "users", force: :cascade do |t|
     t.text "name"

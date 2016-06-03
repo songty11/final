@@ -23,8 +23,17 @@ class ArtistsController < ApplicationController
   end
 
   def destroy
-    if @artists
-      @artists.delete
+    artist = Artist.find_by(id:params[:id])
+    if artist
+       albums = Album.where(artist_id:artist.id)
+       albums.each do |album|
+        album.delete
+       end
+      songs = Song.where(artist_id:artist.id)
+      songs.each do |song|
+        song.delete
+      end
+      artist.delete
     end
     redirect_to albums_url
   end
