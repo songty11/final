@@ -1,0 +1,17 @@
+
+<h1 class='page-header'><%= @song.name%></h1>
+
+<%artist = Artist.find_by(id:@song.artist_id)%>
+<%album = Album.find_by(id:@song.album_id)%>
+<p><strong>Artist: </strong>
+    <%= link_to artist.name, artist_path(@song.artist_id) %>
+  </p>
+  <p><strong>Album: </strong>
+    <%= link_to album.title, album_path(@song.album_id) %>
+  </p>
+  <p><strong>Runtime:  </strong>  <%= @song.runtime/60000%>: <%= (@song.runtime%60000)/1000%> min</p>
+  <p><strong>Popularity: </strong> <%= @song.popularity%></p>
+  <hr>
+<div class = "text-center">
+<button type="button" class="btn btn-lg btn-success">Play</button>
+</div>
