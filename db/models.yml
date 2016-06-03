@@ -1,6 +1,9 @@
 User
   name: text
   email: text
+  birthday: text
+  gender: string
+  note: text
   password_digest: text
 
 Album
@@ -27,12 +30,11 @@ Artist
   name: text
   photo_url: text
 
-Review
-  content: text
-  album_id
-  user_id
-
 Toptrack
   name: text
   preview_url: text
   artist_id: integer
+
+Avatar
+  image_url: text
+  user_id: integer

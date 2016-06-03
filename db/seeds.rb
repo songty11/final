@@ -1,11 +1,12 @@
 Album.delete_all
 Artist.delete_all
 Song.delete_all
-Review.delete_all
 User.delete_all
 Toptrack.delete_all
-User.create name: 'Tianyu Song', email: 'songty@uchicago.edu', password: 's5468279130', password_confirmation: 's5468279130'
+Avatar.delete_all
 
+user = User.create name: 'Tianyu Song', email: 'songty@uchicago.edu', gender:'male',note:'I am smart!',birthday: '1993-03-08', password: 's5468279130', password_confirmation: 's5468279130'
+Avatar.create(image_url:'songty.jpg',user_id:user.id)
 
 # generated in python
 artist = Artist.create(name: 'Britney Spears', spotify_id: '26dSoYclwsYLMAKD3tpOr4', photo_url: 'https://i.scdn.co/image/f3f0e89644c30c96e50ddd483e3abedf744a460f')

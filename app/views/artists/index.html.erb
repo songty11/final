@@ -1,4 +1,4 @@
-<h1 class="page-header">Artists</h1>
+<h1 class="page-header"><span class="label label-primary">Artists</span></h1>
 <ul>
 <% @artists.each do |artist| %>
   <li class='track-list'><%= link_to artist.name, artist_path(artist.id) %></li>

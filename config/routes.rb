@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   resources :users
   resources :rspotifys
   resources :songs
+  resources :avatars
 
-  get '/artists', to: 'artists#index'
   get '/login' => 'sessions#new'
   post '/sessions' => 'sessions#create'
   get '/logout' => 'sessions#destroy'

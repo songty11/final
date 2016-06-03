@@ -35,14 +35,12 @@ ActiveRecord::Schema.define(version: 0) do
 
   add_index "artists", ["spotify_id"], name: "index_artists_on_spotify_id"
 
-  create_table "reviews", force: :cascade do |t|
-    t.text    "content"
-    t.integer "album_id"
+  create_table "avatars", force: :cascade do |t|
+    t.text    "image_url"
     t.integer "user_id"
   end
 
-  add_index "reviews", ["album_id"], name: "index_reviews_on_album_id"
-  add_index "reviews", ["user_id"], name: "index_reviews_on_user_id"
+  add_index "avatars", ["user_id"], name: "index_avatars_on_user_id"
 
   create_table "songs", force: :cascade do |t|
     t.text    "name"
@@ -65,9 +63,12 @@ ActiveRecord::Schema.define(version: 0) do
   add_index "toptracks", ["artist_id"], name: "index_toptracks_on_artist_id"
 
   create_table "users", force: :cascade do |t|
-    t.text "name"
-    t.text "email"
-    t.text "password_digest"
+    t.text   "name"
+    t.text   "email"
+    t.text   "password_digest"
+    t.text   "birthday"
+    t.string "gender"
+    t.text   "note"
   end
 
 end

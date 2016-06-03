@@ -92,9 +92,6 @@ body {
     padding: 17px 12px;
     pointer-events: none;
 }
-.artist-album{
-  
-}
 .artist-photo{
   padding:20px;
   text-align: center;
@@ -106,4 +103,21 @@ body {
 .btn-delete{
    position: relative;
    top :55px;
+}
+.navbar-default{
+  font-weight:500;
+}
+.avatar-box{
+  text-align: center;
+  margin: auto auto;
+  display: block;
+  width: 180px;
+  height: 220px;
+}
+.avatar-box img {
+  text-align: center;
+  margin: auto auto;
+  display: block;
+  width: 180px;
+  height: 180px;
 }
