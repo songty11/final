@@ -15,3 +15,6 @@ Click on the one specific song and you will get more details including the runti
 Click on the singer and you will see all albums he has.
 
 There will also be a search function lets you to search for a specific song.
+
+
+ImageMagick/GraphicsMagick is not installed
