@@ -30,8 +30,8 @@
             <div class="form-group">
              <div class="right-inner-addon">
            
-           <%= form_tag artists_url, :method => :get do %>
-           <%= text_field_tag :artist_name, '', placeholder: 'Search',:class => "form-control" %>
+           <%= form_tag albums_url, :method => :get do %>
+           <%= text_field_tag :keyword, '', placeholder: 'Search',:class => "form-control" %>
            <i class="fa fa-search"></i>
            
            <%end%>

@@ -4,6 +4,7 @@ User
   birthday: text
   gender: string
   note: text
+  image: text
   password_digest: text
 
 Album
@@ -15,7 +16,6 @@ Album
   album_type: text
   popularity: integer
   total_tracks: integer
-
 
 Song
   name: text
@@ -34,7 +34,3 @@ Toptrack
   name: text
   preview_url: text
   artist_id: integer
-
-Avatar
-  image_url: text
-  user_id: integer

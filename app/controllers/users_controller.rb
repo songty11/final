@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def show
-    @user = User.find_by(id: params[:id])
     if !@user || (@user.id != session[:user_id].to_i)
       redirect_to root_url
     end
@@ -12,17 +12,18 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find_by(id: params[:id])
   end
 
   def update
-    @user = User.find_by(id: params[:id])
-    @user.name = params[:user][:name]
-    @user.gender = params[:user][:gender]
-    @user.birthday = params[:user][:birthday]
-    @user.note = params[:user][:note]
-    @user.save
-    redirect_to users_url(@user)
+    respond_to do |format|
+      if @user.update(user_params)
+        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.json { render :show, status: :ok, location: @user }
+      else
+        format.html { render :edit }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   def create
@@ -30,14 +31,25 @@ class UsersController < ApplicationController
     user.name = params[:user][:name]
     user.email = params[:user][:email]
     user.password = params[:user][:password]
+    user.image = "male_default.png"
     user.save
-    Avatar.create(image_url:"male_default.png",user_id:user.id)
-    redirect_to root_path
+    redirect_to login_url
   end
 
   def destroy
-    User.delete(params[:id])
+    @user.destroy
+    respond_to do |format|
+      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      format.json { head :no_content }
+    end
     redirect_to root_path
   end
 
+  private
+  def set_user
+      @user = User.find(params[:id])
+  end
+  def user_params
+      params.require(:user).permit(:name, :note, :image, :gender, :birthday, :email)
+    end
 end

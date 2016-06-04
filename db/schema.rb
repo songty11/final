@@ -35,13 +35,6 @@ ActiveRecord::Schema.define(version: 0) do
 
   add_index "artists", ["spotify_id"], name: "index_artists_on_spotify_id"
 
-  create_table "avatars", force: :cascade do |t|
-    t.text    "image_url"
-    t.integer "user_id"
-  end
-
-  add_index "avatars", ["user_id"], name: "index_avatars_on_user_id"
-
   create_table "songs", force: :cascade do |t|
     t.text    "name"
     t.integer "runtime"
@@ -69,6 +62,7 @@ ActiveRecord::Schema.define(version: 0) do
     t.text   "birthday"
     t.string "gender"
     t.text   "note"
+    t.text   "image"
   end
 
 end
