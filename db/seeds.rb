@@ -33,8 +33,7 @@ Toptrack.create(name: "Till the World Ends", preview_url:"https://p.scdn.co/mp3-
 Toptrack.create(name: "Circus", preview_url:"https://p.scdn.co/mp3-preview/8085b6ee836e9cbb7032576fcf8f1b51d9a53c0d", artist_id:artist.id)
 Toptrack.create(name: "Gimme More", preview_url:"https://p.scdn.co/mp3-preview/933d11a18d0ec4884f4a9620f4d628a7295e8faf", artist_id:artist.id)
 Toptrack.create(name: "Piece of Me", preview_url:"https://p.scdn.co/mp3-preview/2ece5b2602fdaa7a69643e8729d96ae9c73b19a8", artist_id:artist.id)
-album = Album.create(title: '...Baby One More Time (Digital Deluxe Version)',year: '1999',popularity: 72,image_url: 'https://i.scdn.co/image/cd755b462e6a9767e7484432646212f2a5f850d7',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '3WNxdumkSMGMJRhEgK80qx
-')
+album = Album.create(title: '...Baby One More Time (Digital Deluxe Version)',year: '1999',popularity: 72,image_url: 'https://i.scdn.co/image/cd755b462e6a9767e7484432646212f2a5f850d7',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '3WNxdumkSMGMJRhEgK80qx')
 
 Song.create(name: "...Baby One More Time", runtime: 211066, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/da2134a161f1cb34d17c2d6d7e77cc93d1c1e6f7", popularity: 83)
 Song.create(name: "(You Drive Me) Crazy", runtime: 198066, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/2a8aad406e16c4d52a9850de54a02efe5f1ee2ff", popularity: 55)
@@ -52,8 +51,7 @@ Song.create(name: "I'll Never Stop Loving You", runtime: 221626, album_id: album
 Song.create(name: "Autumn Goodbye", runtime: 221040, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/473664a66738c813a449aa1afcc92b4fa758629b", popularity: 48)
 Song.create(name: "...Baby One More Time - Davidson Ospina Radio Mix", runtime: 204560, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/7968d695dabbeedf5a26dacb43041804957b27bd", popularity: 47)
 Song.create(name: "...Baby One More Time - Boy Wunder Radio Mix", runtime: 207066, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/01c90012bade9a136e2e9eab59226474ffb010c7", popularity: 65)
-album = Album.create(title: 'Britney Jean (Deluxe Version)',year: '2013-11-30',popularity: 69,image_url: 'https://i.scdn.co/image/24aa20220e7fec049c5fec81a45f316ef796c3bb',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '5rlB2HPoNHg2m1wmmh0TRv
-')
+album = Album.create(title: 'Britney Jean (Deluxe Version)',year: '2013-11-30',popularity: 69,image_url: 'https://i.scdn.co/image/24aa20220e7fec049c5fec81a45f316ef796c3bb',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '5rlB2HPoNHg2m1wmmh0TRv')
 Song.create(name: "Alien", runtime: 236000, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/4c8fa0412075b0269896859d73aff2be18ecc8d0", popularity: 58)
 Song.create(name: "Work B**ch", runtime: 247960, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/099a16ea80fddbd592595592c4587da4d0a923d2", popularity: 64)
 Song.create(name: "Perfume", runtime: 239973, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/ffab19e7295e5e7fd6665124ccf29a5292380356", popularity: 76)
@@ -82,8 +80,7 @@ Toptrack.create(name: "I'm with You", preview_url:"https://p.scdn.co/mp3-preview
 Toptrack.create(name: "Rock N Roll", preview_url:"https://p.scdn.co/mp3-preview/1c93e48432c4f885f035df4d24025a6b75983e83", artist_id:artist.id)
 Toptrack.create(name: "What the Hell", preview_url:"https://p.scdn.co/mp3-preview/1658e258774cdd060dc7b88b99f4d234ce7735c0", artist_id:artist.id)
 Toptrack.create(name: "Give You What You Like", preview_url:"https://p.scdn.co/mp3-preview/5f74297c785f0dd32e5b73514e156b6d2a1de96c", artist_id:artist.id)
-album = Album.create(title: 'Goodbye Lullaby',year: '2011-03-04',popularity: 66,image_url: 'https://i.scdn.co/image/9c5496fa2c84108c9f8459dbc543364f2b4d808f',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '3SUtKkjatUCubbgOC8OP4o
-')
+album = Album.create(title: 'Goodbye Lullaby',year: '2011-03-04',popularity: 66,image_url: 'https://i.scdn.co/image/9c5496fa2c84108c9f8459dbc543364f2b4d808f',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '3SUtKkjatUCubbgOC8OP4o')
 Song.create(name: "Black Star", runtime: 94093, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/d8fafdabd5c1d41e52c8561f88afd8ebc2b24e38", popularity: 48)
 Song.create(name: "What the Hell", runtime: 220626, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/1658e258774cdd060dc7b88b99f4d234ce7735c0", popularity: 67)
 Song.create(name: "Push", runtime: 181293, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/e9f4c6fb2195ce792c1af79d12bab6d030c3d7b2", popularity: 70)
@@ -111,8 +108,7 @@ Toptrack.create(name: "As Long as You Love Me", preview_url:"https://p.scdn.co/m
 Toptrack.create(name: "All I Have to Give", preview_url:"https://p.scdn.co/mp3-preview/a2e4a37d486fbf861214a2976879a90afe5337f3", artist_id:artist.id)
 Toptrack.create(name: "Everybody (Backstreet's Back) - Radio Edit", preview_url:"https://p.scdn.co/mp3-preview/331ae7f182384985b601fc75ae7f0e7a0c821de5", artist_id:artist.id)
 Toptrack.create(name: "Drowning", preview_url:"https://p.scdn.co/mp3-preview/5015ff4fdf511e0b60659a6b352b6b7eedbd434e", artist_id:artist.id)
-album = Album.create(title: 'This Is Us',year: '2009-10-05',popularity: 48,image_url: 'https://i.scdn.co/image/eb3e60c83c949ea303d73b6ede9bca29b875b52a',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '08wSk6XJ7365lO47E1278L
-')
+album = Album.create(title: 'This Is Us',year: '2009-10-05',popularity: 48,image_url: 'https://i.scdn.co/image/eb3e60c83c949ea303d73b6ede9bca29b875b52a',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '08wSk6XJ7365lO47E1278L')
 Song.create(name: "Straight Through My Heart", runtime: 207280, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/63f4c44845fce52a41026ac9d0d12b11a65eebef", popularity: 42)
 Song.create(name: "Bigger", runtime: 195960, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/744c6856b356cf1b2caf9d90672ad00d07be8a39", popularity: 51)
 Song.create(name: "Bye Bye Love", runtime: 260480, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/d34e65e443663963d76a2b8afcb3fa2f1aa27d9d", popularity: 45)
@@ -126,9 +122,6 @@ Song.create(name: "Shattered", runtime: 233266, album_id: album.id, artist_id: a
 Song.create(name: "Undone", runtime: 254506, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/17055f118410de56cecd9806c0ff6dfde325265c", popularity: 86)
 
 
-
-
-
 artist = Artist.create(name: 'Two Steps from Hell', spotify_id: '2qvP9yerCZCS0U1gZU8wYp', photo_url: 'https://i.scdn.co/image/12b30b31d8cf732ae20552f17bb8dda4e817658e')
 Toptrack.create(name: "Heart of Courage", preview_url:"https://p.scdn.co/mp3-preview/14281b9f28c72c987dbc73fb1a542667f8806633", artist_id:artist.id)
 Toptrack.create(name: "Protectors of the Earth", preview_url:"https://p.scdn.co/mp3-preview/6a023867c47d3825184415a910084ab77bd5a168", artist_id:artist.id)
@@ -140,8 +133,7 @@ Toptrack.create(name: "Victory", preview_url:"https://p.scdn.co/mp3-preview/93f6
 Toptrack.create(name: "To Glory", preview_url:"https://p.scdn.co/mp3-preview/8629c4fc79fc1609e3847c597c3db89f70ec9f09", artist_id:artist.id)
 Toptrack.create(name: "Freedom Fighters", preview_url:"https://p.scdn.co/mp3-preview/b0f9d9da8a00865ee4f2a2bbe201935a51c7dcac", artist_id:artist.id)
 Toptrack.create(name: "Invincible", preview_url:"https://p.scdn.co/mp3-preview/7614b697649bdec66287e8cf5df6739ed52e7d09", artist_id:artist.id)
-album = Album.create(title: 'Battlecry',year: '2015-04-28',popularity: 64,image_url: 'https://i.scdn.co/image/287e156adb6ecf8b83585af187b240137c137929',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '4y7T04fej3MJ8tAe2FeKD5
-')
+album = Album.create(title: 'Battlecry',year: '2015-04-28',popularity: 64,image_url: 'https://i.scdn.co/image/287e156adb6ecf8b83585af187b240137c137929',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '4y7T04fej3MJ8tAe2FeKD5')
 Song.create(name: "None Shall Live", runtime: 139981, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/7ae2293054e3eacc930008980e820f4e55050b7a", popularity: 84)
 Song.create(name: "Stormkeeper", runtime: 175471, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/79cf2e6f26a2488c195d680bae0ef81a39d19097", popularity: 71)
 Song.create(name: "Victory", runtime: 320467, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/93f65b9df64f2fbc94d34a4eec9101c76f107161", popularity: 63)
@@ -181,8 +173,7 @@ Toptrack.create(name: "He Reigns / Awesome God", preview_url:"https://p.scdn.co/
 Toptrack.create(name: "Brighter Day", preview_url:"https://p.scdn.co/mp3-preview/2f02bb7bdd9aee7900c455a48d248a5202865175", artist_id:artist.id)
 Toptrack.create(name: "Something About the Name Jesus", preview_url:"https://p.scdn.co/mp3-preview/8f1e439bb7e5be13d799b3cc2190df4b0f130b1d", artist_id:artist.id)
 Toptrack.create(name: "My World Needs You", preview_url:"https://p.scdn.co/mp3-preview/ca08b90545356e40070f74967cf84321b6c4dd23", artist_id:artist.id)
-album = Album.create(title: 'Hello Fear',year: '2011-03-18',popularity: 61,image_url: 'https://i.scdn.co/image/32a66ecaea613632e267a3a9722606454ddc5fc9',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '6CkiHbEFRtD75ghxLBOn3N
-')
+album = Album.create(title: 'Hello Fear',year: '2011-03-18',popularity: 61,image_url: 'https://i.scdn.co/image/32a66ecaea613632e267a3a9722606454ddc5fc9',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '6CkiHbEFRtD75ghxLBOn3N')
 Song.create(name: "Hello Fear", runtime: 333786, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/cdfc593f6e203b15ff5bb19dc35865efd5b47573", popularity: 45)
 Song.create(name: "The Story Of Fear", runtime: 70200, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/8f61ac6b7afa5fae5c339ac875156f00e8b0012c", popularity: 47)
 Song.create(name: "Before I Die", runtime: 263973, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/b21bf6becabcde5b93cbc06efbaa05473e284fd3", popularity: 60)
@@ -211,8 +202,7 @@ Toptrack.create(name: "4 Life (feat. Graham Candy)", preview_url:"https://p.scdn
 Toptrack.create(name: "Save Tonight (feat. Solamay)", preview_url:"https://p.scdn.co/mp3-preview/64b27bfbdabce51c6c3df5b70c6fb6798e21e109", artist_id:artist.id)
 Toptrack.create(name: "Show Me Love - Acoustic Version", preview_url:"https://p.scdn.co/mp3-preview/db0bd43a550911ef362b11ea1452efe856d0f918", artist_id:artist.id)
 Toptrack.create(name: "Sun Goes Down (feat. Jasmine Thompson) - Radio Mix", preview_url:"https://p.scdn.co/mp3-preview/9eea19a9a84505f27e63534a8a876db6766da765", artist_id:artist.id)
-album = Album.create(title: 'SUGAR',year: '2015-09-25',popularity: 89,image_url: 'https://i.scdn.co/image/53fea48ae7ad87d8dea8fbf28ba2573b8a332a11',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '5XyJzEROSmup2TcWmVjTIt
-')
+album = Album.create(title: 'SUGAR',year: '2015-09-25',popularity: 89,image_url: 'https://i.scdn.co/image/53fea48ae7ad87d8dea8fbf28ba2573b8a332a11',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '5XyJzEROSmup2TcWmVjTIt')
 Song.create(name: "Headlights (feat. Ilsey)", runtime: 209208, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/3da874902a1076518f0d53347dd9638b154339e5", popularity: 71)
 Song.create(name: "Sugar (feat. Francesco Yates)", runtime: 219043, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/c4b6941542e99f1a0cf480d6b1ed033be783a3fa", popularity: 40)
 Song.create(name: "Heatwave (feat. Akon)", runtime: 187126, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/795e64c46846be6fb7e1eac86ca479454f24bd3d", popularity: 77)
@@ -241,8 +231,7 @@ Toptrack.create(name: "It Happens", preview_url:"https://p.scdn.co/mp3-preview/5
 Toptrack.create(name: "Want To", preview_url:"https://p.scdn.co/mp3-preview/e94e648c15dccb679d959e457852c1857c8f5ada", artist_id:artist.id)
 Toptrack.create(name: "Settlin'", preview_url:"https://p.scdn.co/mp3-preview/005b70de842f3d1685344556c7cf787f2a56a135", artist_id:artist.id)
 Toptrack.create(name: "Already Gone", preview_url:"https://p.scdn.co/mp3-preview/93ea2c0f700121c64d9645e220161629c9c21e03", artist_id:artist.id)
-album = Album.create(title: 'The Incredible Machine',year: '2010-10-18',popularity: 57,image_url: 'https://i.scdn.co/image/5d35bfcc26525f112fe0442d568389334eaca559',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '6tRJWFLsUW4HuiXHlOSnwf
-')
+album = Album.create(title: 'The Incredible Machine',year: '2010-10-18',popularity: 57,image_url: 'https://i.scdn.co/image/5d35bfcc26525f112fe0442d568389334eaca559',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '6tRJWFLsUW4HuiXHlOSnwf')
 Song.create(name: "All We Are", runtime: 228520, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/09eb490fbb54de68a1a2ca36411843c1aadcc857", popularity: 44)
 Song.create(name: "Incredible Machine", runtime: 301253, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/cde5094106fa3b9bf41b772f684ace76dfdf8d01", popularity: 56)
 Song.create(name: "Stuck Like Glue", runtime: 247586, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/998ba5b7c89dce4b32628b490b62912a06c4b35a", popularity: 65)
@@ -267,8 +256,7 @@ Toptrack.create(name: "Turning Tables", preview_url:"https://p.scdn.co/mp3-previ
 Toptrack.create(name: "One And Only", preview_url:"https://p.scdn.co/mp3-preview/cdf63067c7bdc1fed96739351128fa45bac5c4ad", artist_id:artist.id)
 Toptrack.create(name: "Make You Feel My Love", preview_url:"https://p.scdn.co/mp3-preview/ee19b577b18ab550757c2fab5bd307921a3a1db5", artist_id:artist.id)
 Toptrack.create(name: "Rumour Has It", preview_url:"https://p.scdn.co/mp3-preview/25971251f3ce83423c2d526e811bd4e4dada2d49", artist_id:artist.id)
-album = Album.create(title: 'Hello',year: '2015-10-23',popularity: 81,image_url: 'https://i.scdn.co/image/f71517e8919892273de8d8677e42cdcf1b976aa7',artist_id: artist.id ,album_type: 'single',total_tracks: 7,spotify_id: '1Eo1pg2D4beFgf3HFTJTMc
-')
+album = Album.create(title: 'Hello',year: '2015-10-23',popularity: 81,image_url: 'https://i.scdn.co/image/f71517e8919892273de8d8677e42cdcf1b976aa7',artist_id: artist.id ,album_type: 'single',total_tracks: 7,spotify_id: '1Eo1pg2D4beFgf3HFTJTMc')
 Song.create(name: "Hello", runtime: 295493, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/0b90429fd554bad6785faa2b8931d613db4a0ee4", popularity: 86)
 
 
@@ -283,8 +271,7 @@ Toptrack.create(name: "In Love with a Girl", preview_url:"https://p.scdn.co/mp3-
 Toptrack.create(name: "Touch It", preview_url:"https://p.scdn.co/mp3-preview/fba70a7942a8906e5cb2d3bc04dcfb9e438651c5", artist_id:artist.id)
 Toptrack.create(name: "Life Is a Highway", preview_url:"https://p.scdn.co/mp3-preview/6f16108fb615f2c520fcfc0829e6a2f5b89624aa", artist_id:artist.id)
 Toptrack.create(name: "Lips of an Angel", preview_url:"https://p.scdn.co/mp3-preview/0c9e0f29824c1f58cfa8f4e1cc54568a5d836288", artist_id:artist.id)
-album = Album.create(title: 'I Know You See It',year: '2016-04-18',popularity: 51,image_url: 'https://i.scdn.co/image/e7b934c594c669701819fe411b0f38a1863b3bb5',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '6XF1NPHXZsnV2ZM03F0hjS
-')
+album = Album.create(title: 'I Know You See It',year: '2016-04-18',popularity: 51,image_url: 'https://i.scdn.co/image/e7b934c594c669701819fe411b0f38a1863b3bb5',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '6XF1NPHXZsnV2ZM03F0hjS')
 Song.create(name: "See You Again", runtime: 55018, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/7b20ebd854e1c80db8feb29404b3031a72fd111f", popularity: 57)
 Song.create(name: "Like You'll Never See Me Again", runtime: 66279, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/75a44ba1a2d2918b8850b308bbd0c31c8716ffc4", popularity: 55)
 Song.create(name: "When I Grow Up", runtime: 65800, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/d2ea425554b4d0aaf7a588385888a506999653b7", popularity: 74)
@@ -302,8 +289,7 @@ Toptrack.create(name: "See You Again", preview_url:"https://p.scdn.co/mp3-previe
 Toptrack.create(name: "See You Again - Karaoke Version", preview_url:"https://p.scdn.co/mp3-preview/2f7c5be26498277ed6c34e4813118d5b12b16b1d", artist_id:artist.id)
 Toptrack.create(name: "See You Again - Tribute to Carrie Underwood", preview_url:"https://p.scdn.co/mp3-preview/61b3a9be23ba7ee8e85e05edfc211f8690fdb3a5", artist_id:artist.id)
 Toptrack.create(name: "See You Again - Tribute to Carrie Underwood (Instrumental Version)", preview_url:"https://p.scdn.co/mp3-preview/cdd6a8fec746743ca7cf40404f457f277a04fbe1", artist_id:artist.id)
-album = Album.create(title: 'See You Again',year: '2015-06-01',popularity: 45,image_url: 'https://i.scdn.co/image/0dc655295dcd510e65df59b873d4d3cf552f31e4',artist_id: artist.id ,album_type: 'single',total_tracks: 7,spotify_id: '1dEUFgohmbOTrWr1gwul4i
-')
+album = Album.create(title: 'See You Again',year: '2015-06-01',popularity: 45,image_url: 'https://i.scdn.co/image/0dc655295dcd510e65df59b873d4d3cf552f31e4',artist_id: artist.id ,album_type: 'single',total_tracks: 7,spotify_id: '1dEUFgohmbOTrWr1gwul4i')
 Song.create(name: "See You Again", runtime: 228375, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/96c1f5f84024d491ba737df9a8f7481ab157c187", popularity: 67)
 Song.create(name: "See You Again - Karaoke Version", runtime: 228375, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/2f7c5be26498277ed6c34e4813118d5b12b16b1d", popularity: 75)
 
@@ -319,8 +305,7 @@ Toptrack.create(name: "Episode I - Duel of The Fates", preview_url:"https://p.sc
 Toptrack.create(name: "Harry's Wondrous World", preview_url:"https://p.scdn.co/mp3-preview/28c82f245bf259a0c513bb4db7604405ff8a8d7a", artist_id:artist.id)
 Toptrack.create(name: "Main Title and The Attack on the Jakku Village", preview_url:"https://p.scdn.co/mp3-preview/f6b1ed05096beba83e882df305dc2a5f3c3b40b1", artist_id:artist.id)
 Toptrack.create(name: "A Window to the Past", preview_url:"https://p.scdn.co/mp3-preview/ce510d718bf341ea962c87d841fea0293efce369", artist_id:artist.id)
-album = Album.create(title: 'Star Wars: The Force Awakens (Original Motion Picture Soundtrack)',year: '2015-12-18',popularity: 66,image_url: 'https://i.scdn.co/image/5c444bbfcd2d50b1e7291f3a737801819d4b4a80',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '3fUKGTsiYL1kSroBWBLmmR
-')
+album = Album.create(title: 'Star Wars: The Force Awakens (Original Motion Picture Soundtrack)',year: '2015-12-18',popularity: 66,image_url: 'https://i.scdn.co/image/5c444bbfcd2d50b1e7291f3a737801819d4b4a80',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '3fUKGTsiYL1kSroBWBLmmR')
 Song.create(name: "Main Title and The Attack on the Jakku Village", runtime: 385920, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/f6b1ed05096beba83e882df305dc2a5f3c3b40b1", popularity: 75)
 Song.create(name: "The Scavenger", runtime: 219933, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/cf98326658625acb5f4d7f02acbf7482c48cf1c4", popularity: 65)
 Song.create(name: "I Can Fly Anything", runtime: 190986, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/f3dc652facd8f2c8292a14add4f148058eae3198", popularity: 56)
@@ -357,8 +342,7 @@ Toptrack.create(name: "When The Roses Bloom Again", preview_url:"https://p.scdn.
 Toptrack.create(name: "One Sunday Morning (Song For Jane Smiley's Boyfriend)", preview_url:"https://p.scdn.co/mp3-preview/30429a8d82835cdb42c496bd2a40a5970a03b1e1", artist_id:artist.id)
 Toptrack.create(name: "Impossible Germany", preview_url:"https://p.scdn.co/mp3-preview/5e3ec21d9833520061aa2aba59f8310fe4bc39f8", artist_id:artist.id)
 Toptrack.create(name: "St. Stephen (live)", preview_url:"https://p.scdn.co/mp3-preview/571f6c107b3f462fa803005d751790cd23984a26", artist_id:artist.id)
-album = Album.create(title: 'Star Wars',year: '2015-07-17',popularity: 55,image_url: 'https://i.scdn.co/image/3ed353a8083bf58dfee0223da267b9c3deb6ac4f',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '7BD2cOGKumTOMctWSysCD5
-')
+album = Album.create(title: 'Star Wars',year: '2015-07-17',popularity: 55,image_url: 'https://i.scdn.co/image/3ed353a8083bf58dfee0223da267b9c3deb6ac4f',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '7BD2cOGKumTOMctWSysCD5')
 Song.create(name: "EKG", runtime: 75547, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/b89139387ab247db40dedbf94f0798bfb30554f1", popularity: 52)
 Song.create(name: "More...", runtime: 163951, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/0dd8391af2f9003149a1517e60ce32fcf0b5f0c1", popularity: 80)
 Song.create(name: "Random Name Generator", runtime: 229488, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/76a2b47cfdee5148f43d557e436ae8526ffa48e5", popularity: 55)
@@ -383,8 +367,7 @@ Toptrack.create(name: "Details in the Fabric (feat. James Morrison)", preview_ur
 Toptrack.create(name: "Lucky - Spotify Session", preview_url:"https://p.scdn.co/mp3-preview/ac15f3108546efe19596c79407629f2ab263759f", artist_id:artist.id)
 Toptrack.create(name: "A Beautiful Mess", preview_url:"https://p.scdn.co/mp3-preview/66293b8f45188ee712430351072a57b60b457fad", artist_id:artist.id)
 Toptrack.create(name: "It's So Hard To Say Goodbye To Yesterday", preview_url:"https://p.scdn.co/mp3-preview/d6556e6e9cf3ab8546496f0e6d012898c4930e26", artist_id:artist.id)
-album = Album.create(title: 'YES!',year: '2014-08-26',popularity: 63,image_url: 'https://i.scdn.co/image/cd3e322c50735883d9c7479e9ee25aea6e5177e5',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '4mV8o8hl6v3u0Gzv0DfrXt
-')
+album = Album.create(title: 'YES!',year: '2014-08-26',popularity: 63,image_url: 'https://i.scdn.co/image/cd3e322c50735883d9c7479e9ee25aea6e5177e5',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '4mV8o8hl6v3u0Gzv0DfrXt')
 Song.create(name: "Rise", runtime: 89013, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/a51da4f8986384bccc5229c48fb190ff1a295a71", popularity: 47)
 Song.create(name: "Love Someone", runtime: 257884, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/ab8fb9174ae66888c2c3a382629651a0ac4e6d34", popularity: 64)
 Song.create(name: "Hello, You Beautiful Thing", runtime: 212586, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/408d88951d32cc5f266bd1ad231c3bf670e886dd", popularity: 50)
@@ -412,8 +395,7 @@ Toptrack.create(name: "Man in the Mirror - 2012 Remaster", preview_url:"https://
 Toptrack.create(name: "The Way You Make Me Feel - 2012 Remaster", preview_url:"https://p.scdn.co/mp3-preview/93f122101d44b96287fa0dea98f1b0f133a413b8", artist_id:artist.id)
 Toptrack.create(name: "Love Never Felt so Good", preview_url:"https://p.scdn.co/mp3-preview/a1fb1d7a91cf63421b8da76ed33e4fee7518ccca", artist_id:artist.id)
 Toptrack.create(name: "Rock with You - Single Version", preview_url:"https://p.scdn.co/mp3-preview/6d950aa4c01473bee46de9c601f7c9c06d7576b3", artist_id:artist.id)
-album = Album.create(title: "Michael Jackson's This Is It",year: '2009-10-26',popularity: 75,image_url: 'https://i.scdn.co/image/c24c5744f2f664c1d11343cca01e3c67fd32e10d',artist_id: artist.id ,album_type: 'compilation',total_tracks: 7,spotify_id: '7pMVCMwGykuEu9rzTHxLCm
-')
+album = Album.create(title: "Michael Jackson's This Is It",year: '2009-10-26',popularity: 75,image_url: 'https://i.scdn.co/image/c24c5744f2f664c1d11343cca01e3c67fd32e10d',artist_id: artist.id ,album_type: 'compilation',total_tracks: 7,spotify_id: '7pMVCMwGykuEu9rzTHxLCm')
 Song.create(name: "Wanna Be Startin' Somethin'", runtime: 362386, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/b61d9bdc7d511d1f0bc8cc11065a44d1bc9748e4", popularity: 53)
 Song.create(name: "Jam - Remastered Version", runtime: 338986, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/b65acfdad8db27e0a78c348b1662f263a2688d5f", popularity: 71)
 Song.create(name: "They Don't Care About Us - Remastered Version", runtime: 284560, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/1b941d6bb99949c880e86c9243bcc2608840c4e3", popularity: 53)

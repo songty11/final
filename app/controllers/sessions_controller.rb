@@ -9,19 +9,20 @@ class SessionsController < ApplicationController
     if user
       if user.authenticate(params[:password])
         session["user_id"] = user.id
-        flash["notice"] = "Welcome back, #{user.name}"
+        flash[:success] = "Welcome back, #{user.name}"
         redirect_to albums_url
         return
       else
       end
     else
     end
-    redirect_to login_url, notice: "Invalid email or password"
+    flash[:danger] = "Invalid email or password"
+    redirect_to login_url
   end
 
   def destroy
     reset_session
-    redirect_to albums_url
+    redirect_to root_path
   end
 
 end

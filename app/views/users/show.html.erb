@@ -29,7 +29,7 @@
 <%if @user.image.length > 0%>
 	<p><%= image_tag @user.image, class:"img-circle"%></p>
 <%else%>
-	<%if @user.gender == 'female'%>
+	<%if @user.gender == 'Female'%>
 	<p><%= image_tag "female_default.png", class:"img-circle"%></p>
 	<%else%>
 	<p><%= image_tag "male_default.png", class:"img-circle"%></p>
@@ -43,12 +43,18 @@
 <div class="col-lg-12">
 <h3><span class="label label-primary">Tweet</span></h3>
 <hr>
-<%tweets = Tweet.where(user_id:@user.id)%>
+<%tweets = @user.tweets.all%>
 <%tweets.each do |tweet|%>
+<div class = "row">
+<div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
 <span class="label label-success"><%=tweet.time%></span>
-
 <%=tweet.content%>
-<br>
+</div>
+<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+<%=button_to "Delete",tweet_path(tweet.id),:method => :delete, :class=>"btn btn-xs btn-danger"%>
+
+</div>
+</div>
 <br>
 <%end%>
 </div>
@@ -60,7 +66,7 @@
 <div class="col-lg-12">
 <hr>
  <div class="text-center">
-    <%=button_to "Delete",user_path(@user.id),:method => :delete, :class=>"btn btn-sm btn-danger"%>
+    <%=button_to "Delete",user_path(@user.id),:method => :delete, :class=>"btn btn-danger"%>
     </div>
     </div>
   </div>

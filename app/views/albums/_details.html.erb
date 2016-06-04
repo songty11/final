@@ -4,15 +4,17 @@
 
 
 <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8">
-  <p><strong>Artist: </strong>
+  <p><strong><span class="label label-info">Artist:</span></strong>
     <%= link_to @album.artist.name, artist_path(@album.artist.id) %>
   </p>
 
-  <p><strong>Released:</strong> <%= @album.year %></p>
-  <p><strong>Popularity: </strong> <%= @album.popularity%></p>
-  <p><strong>Type: </strong> <%= @album.album_type%></p>
-  <p><strong>Total Tracks: </strong> <%= @album.total_tracks%></p>
-  <p><strong>Tracks: </strong></p>
+  <p><strong><span class="label label-info">Released:</span></strong> <%= @album.year %></p>
+
+  <p><strong><span class="label label-info">Popularity:</span></strong> <%= @album.popularity%></p>
+  <p><strong><span class="label label-info">Type:</span></strong> <%= @album.album_type%></p>
+  <p><strong><span class="label label-info">total_tracks:</span></strong> <%= @album.total_tracks%></p>
+  <p><strong><span class="label label-info">Tracks:</span></strong></p>
+  <hr>
   <ul>
     <% @album.songs.each do |song| %>
         <li class="track-list"><%= link_to song.name, song_path(song.id) %></li>
@@ -22,7 +24,6 @@
   <div class="col-sm-2 col-md-4 col-lg-4">
   <p><%= image_tag @album.image_url%></p>
 
- 
   </div>
 </div>
 </div>

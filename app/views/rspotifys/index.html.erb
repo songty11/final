@@ -1,18 +1,23 @@
+  <div class = "row">
+   <div class="col-md-12">
 <h1 class='page-header'>Add a New Album</h1>
-
-
+</div>
+</div>
+  <div class = "row">
 <%= form_tag '/rspotifys', method: "get", html: { class: "form" } do %>
- <div class="form-group col-md-4">
+ <div class="form-group col-sm-4 col-md-4 col-lg-4">
    <%= text_field_tag(:album_name, "", placeholder: "Enter album name", class: "form-control") %>
-  
- </div>
-
+   </div>
+    <div class="col-sm-8 col-md-8 col-lg-8">
  <%= submit_tag "Search on spotify", class: "btn btn-primary" %>
+</div>
 <% end %>
+ </div>
+</div>
+
+
 
 <%if @album!=nil%>
-<h3 class="page-header"></h3>
-
 <ul>
  <% @album.each do |album| %>
  <div class='spotify-box '>

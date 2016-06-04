@@ -51,7 +51,8 @@ skip_before_filter :verify_authenticity_token, :only => :create
 		    end
 
 		else
-			redirect_to albums_url, notice: "Album already exsists!"
+			flash[:warning] = "Album already exsists!"
+			redirect_to albums_url
 		end
 
 	end

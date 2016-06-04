@@ -14,7 +14,7 @@
       </span>
       </h3>
       <hr>
-      <%tracks = Toptrack.where(artist_id: @artist.id)%>
+      <%tracks = @artist.toptracks.all%>
       <ul>
         <%tracks.each do |track|%>
           <li class="track-list">

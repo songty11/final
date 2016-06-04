@@ -1,4 +1,6 @@
-<div class="page-header text-center"><h1>HOME</h1></div>
+<div class="page-header text-center"><h1>ALBUM</h1></div>
+<% if session["user_id"].present? and User.find_by(id: session["user_id"])!=nil%>
  <%= render 'album', album: nil %>
+ <%end%>
 <%= render @albums %>
 

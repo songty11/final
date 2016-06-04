@@ -3,28 +3,30 @@
 
 
 <%@users.each do |user|%>
-<%tweets = Tweet.where(user_id:user.id)%>
-<div class='row'>
-<div class="col-sm-9 col-md-9 col-lg-9">
-<div class='tweet-box'>
-<%if user.image.length > 0%>
-	<%= image_tag user.image%>
-<%else%>
-	<%if user.gender == 'Female'%>
-	<%= image_tag "female_default.png"%>
-	<%else%>
-	<%= image_tag "male_default.png"%>
-	<%end%>
-<%end%>
-<span class="label label-success"><%=user.name%></span>
-<%=tweets[tweets.length-1].content%>
-</div>
-</div>
-<div class="col-sm-2 col-md-2 col-lg-2 col-lg-offset-1 col-sm-offset-1 col-md-offset-1" style="top: 12px;">
-<span class="label label-primary"><%=tweets[tweets.length-1].time%></span>
-</div>
-</div>
+<%tweets = user.tweets.all%>
+<%if tweets.size>0 %>
+	<div class='row'>
+		<div class="col-sm-9 col-md-9 col-lg-9">
+		<div class='tweet-box'>
+		<%if user.image.length > 0%>
+			<%= image_tag user.image%>
+		<%else%>
+			<%if user.gender == 'Female'%>
+			<%= image_tag "female_default.png"%>
+			<%else%>
+			<%= image_tag "male_default.png"%>
+			<%end%>
+		<%end%>
+		<span class="label label-success"><%=user.name%></span>
+		<%=tweets[tweets.length-1].content%>
+		</div>
+		</div>
+		<div class="col-sm-2 col-md-2 col-lg-2 col-lg-offset-1 col-sm-offset-1 col-md-offset-1" style="top: 12px;">
+		<span class="label label-primary"><%=tweets[tweets.length-1].time%></span>
+		</div>
+	</div>
 <hr>
+<%end%>
 <%end%>
 
 <% if session["user_id"].present? and User.find_by(id: session["user_id"])!=nil%>
@@ -33,12 +35,17 @@
 		<h3>Say Something</h3>
 	</div>
 	 <%= form_for Tweet.new(user_id: current_user.id), id: 'tweets_form', remote: true do |f| %>
-	 <%= f.hidden_field :user_id %>
+	 <%= f.hidden_field :user_id%>
 	 <div><%= f.text_area :content, rows: 3, class:'form-control' %></div>
 	 	<br>
 	 <div class= 'text-center'>
 	<%= f.submit "Post",class:"btn btn-default",onclick:"javascript:window.location.reload()"%>
 	</div>
 	<%end%>
+
+<%else%>
+	<div class= 'text-center'>
+		<%=button_to "Log In to Post", login_url, :method => :get, :class=>"btn btn-primary"%>
+	</div>
 <%end%>
 </div>

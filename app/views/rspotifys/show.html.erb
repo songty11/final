@@ -1,21 +1,27 @@
-<!-- app/views/artists/show.html.erb -->
-<h1 class="page-header"><%= @album.name %>
 <script>
   var player = document.createElement('AUDIO');
   var isPlaying = false;
 </script>
 
-</h1>
-  <p><%= image_tag @album.images[1]['url'], class: 'pull-right' %></p>
-
-  <p><strong>Artist: </strong>
-    <%= link_to @album.artists[0].name, "/" %>
+<div class="container-fluid">
+  <div class="row">
+   <div class="col-lg-12">
+<h1 class="page-header"><%= @album.name %></h1>
+</div>
+</div>
+<% if session["user_id"].present? and User.find_by(id: session["user_id"])!=nil%>
+<div class = "row">
+<div class="col-sm-8 col-md-8 col-lg-8">
+  <p><strong><span class="label label-info">Artist:</span></strong>
+ <%=@album.artists[0].name%>
   </p>
 
-  <p><strong>Released: </strong> <%= @album.release_date%></p>
-  <p><strong>Popularity: </strong> <%= @album.popularity%></p>
-  <p><strong>Type: </strong> <%= @album.album_type%></p>
-  <p><strong>Tracks: </strong>
+  <p><strong><span class="label label-info">Released:</span> </strong> <%= @album.release_date%></p>
+  <p><strong><span class="label label-info">Popularity:</span> </strong> <%= @album.popularity%></p>
+  <p><strong><span class="label label-info">Type:</span></strong> <%= @album.album_type%></p>
+
+    
+    <p><strong><span class="label label-info">Tracks:</span> </strong><small>(click to play)</small></p>
  <ul>
  <%total_tracks=0%>
    <% @album.tracks.each do |track| %>
@@ -27,10 +33,15 @@
      </li>
    <% end %>
  </ul>
-
-
+ </div>
+  <div class="col-sm-3 col-md-3 col-lg-3">
+  <p><%= image_tag @album.images[1]['url']%></p>
+</div>
  <hr>
+</div>
 
+<div class = "row">
+ <div class="col-lg-12">
  <form action="/albums" method="post">
   <input name="title" type="hidden" value= "<%=@album.name%>" />
   <input name="image_url" type="hidden" value= "<%=@album.images[1]['url']%>" />
@@ -43,6 +54,44 @@
   <input name="album_type" type="hidden" value= "<%= @album.album_type%>" />
   <input name="Add This Album" type="submit" value="Add This Album" class="btn btn-success" />
 </form>
+</div>
+</div>
+
+</div>
+<%else%>
+<div class = "row">
+ 
+<div class="col-sm-8 col-md-8 col-lg-8">
+  <p><strong>Artist: </strong>
+ <%=@album.artists[0].name%>
+  </p>
+
+ <p><strong><span class="label label-info">Released:</span></strong> <%= @album.release_date%></p>
+  <p><strong><span class="label label-info">Popularity:</span> </strong> <%= @album.popularity%></p>
+  <p><strong><span class="label label-info">Type:</span> </strong> <%= @album.album_type%></p>
+ <p><strong><span class="label label-info">Tracks:</span> </strong><small>(login to play)</small></p>
+ <ul>
+   <% @album.tracks.each do |track| %>
+     <li class="track-list">
+      <%= track.name %>
+     </li>
+   <% end %>
+ </ul>
+ </div>
+ <div class="col-sm-3 col-md-3 col-lg-3">
+  <p><%= image_tag @album.images[1]['url']%></p>
+</div>
+ </div>
+ <div class = "row">
+ <div class="col-lg-12">
+    <%=button_to "Log In to Add this album", login_url, :method => :get, :class=>"btn btn-primary"%>
+     </div>
+     </div>
+<%end%>
+
+
+
+
 
 <script>
   $(".audioplay").on("click", function(){

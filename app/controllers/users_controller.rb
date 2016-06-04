@@ -31,22 +31,33 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.new
-    user.name = params[:user][:name]
-    user.email = params[:user][:email]
-    user.password = params[:user][:password]
-    user.image = "male_default.png"
-    user.save
-    redirect_to login_url
+    if User.find_by(email:params[:user][:email])!=nil
+      flash[:danger]="Email already exists"
+        redirect_to new_user_url
+    else
+      if params[:user][:password] == params[:user][:password_confirmation]
+        user = User.new
+        user.name = params[:user][:name]
+        user.email = params[:user][:email]
+        user.password = params[:user][:password]
+        user.image = "male_default.png"
+        if user.save
+          flash[:success] = "User was successfully created."
+          redirect_to login_url
+        else
+          flash[:danger] = "Somgthing went wrong"
+          redirect_to new_user_url
+        end
+      else
+        flash[:danger]="Password not match"
+        redirect_to new_user_url
+      end
+    end
   end
 
   def destroy
     @user.destroy
-    respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-    redirect_to root_path
+    redirect_to albums_url, notice: 'User was successfully deleted'
   end
 
   private
@@ -55,5 +66,5 @@ class UsersController < ApplicationController
   end
   def user_params
       params.require(:user).permit(:name,:image, :gender, :birthday, :email)
-    end
+  end
 end

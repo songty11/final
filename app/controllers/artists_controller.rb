@@ -25,7 +25,7 @@ class ArtistsController < ApplicationController
       end
       artist.delete
     end
-    redirect_to albums_url
+    redirect_to albums_url notice: '#{artist.name} was successfully deleted'
   end
   
 end
