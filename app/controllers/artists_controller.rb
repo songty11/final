@@ -2,6 +2,9 @@ class ArtistsController < ApplicationController
 
   def index
      @artists = Artist.all
+     if params[:keyword].present?
+       @artists = @artists.where("name LIKE ?","%#{params[:keyword]}%")
+     end
      @artists = @artists.limit(50)
   end
 

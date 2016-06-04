@@ -11,6 +11,10 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def index
+    @users = User.all
+  end
+
   def edit
   end
 
@@ -50,6 +54,6 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
   end
   def user_params
-      params.require(:user).permit(:name, :note, :image, :gender, :birthday, :email)
+      params.require(:user).permit(:name,:image, :gender, :birthday, :email)
     end
 end

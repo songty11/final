@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :users
   resources :rspotifys
   resources :songs
-  resources :avatars
+  resources :tweets
 
   get '/login' => 'sessions#new'
   post '/sessions' => 'sessions#create'

@@ -1,6 +1,10 @@
-<h1 class="page-header"><span class="label label-primary">Artists</span></h1>
-<ul>
+<h1 class="page-header">Artists</h1>
+
 <% @artists.each do |artist| %>
-  <li class='track-list'><%= link_to artist.name, artist_path(artist.id) %></li>
+	
+  <div class='tweet-box'>
+  <%= link_to image_tag(artist.photo_url), artist_path(artist.id)%>
+<strong><span class="label label-success"><%= link_to artist.name, artist_path(artist.id) , style:"color:#ffffff"%></span></strong>
+  	</div>
+  	<hr>
 <% end %>
-</ul>

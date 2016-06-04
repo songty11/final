@@ -3,7 +3,6 @@ User
   email: text
   birthday: text
   gender: string
-  note: text
   image: text
   password_digest: text
 
@@ -34,3 +33,8 @@ Toptrack
   name: text
   preview_url: text
   artist_id: integer
+
+Tweet
+  content: text
+  time: string
+  user_id: integer

@@ -55,13 +55,20 @@ ActiveRecord::Schema.define(version: 0) do
 
   add_index "toptracks", ["artist_id"], name: "index_toptracks_on_artist_id"
 
+  create_table "tweets", force: :cascade do |t|
+    t.text    "content"
+    t.integer "user_id"
+    t.string  "time"
+  end
+
+  add_index "tweets", ["user_id"], name: "index_tweets_on_user_id"
+
   create_table "users", force: :cascade do |t|
     t.text   "name"
     t.text   "email"
     t.text   "password_digest"
     t.text   "birthday"
     t.string "gender"
-    t.text   "note"
     t.text   "image"
   end
 

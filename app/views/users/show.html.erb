@@ -1,6 +1,6 @@
 <div class="container-fluid">
   <div class="row">
-<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+<div class="col-sm-4 col-md-4 col-lg-4">
 
 <h1> <span class="label label-primary">My Account</span>
 <small><small><span class="label label-warning">
@@ -11,25 +11,57 @@
 </div>
 <hr>
 <div class = "row">
-<div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+<div class="col-sm-9 col-md-9 col-lg-9">
 <% if @user.id == session[:user_id].to_i %>
-  <strong><span class="label label-info">Name:</span><p><%= @user.name %></p></strong>
-  <strong><span class="label label-info">Email:</span><p><%= @user.email %></p></strong>
-  <strong><span class="label label-info">Birthday:</span><p><%= @user.birthday %></p></strong>
-  <strong><span class="label label-info">Gender:</span><p><%= @user.gender %></p></strong>
-  <strong><span class="label label-info">Note:</span><p><%= @user.note %></p></strong>
+  <h4><span class="label label-info">Name:</span></h4><h4><%= @user.name %></h4>
+  <h4><span class="label label-info">Email:</span></h4><h4><%= @user.email %></h4>
+  <h4><span class="label label-info">Birthday:</span></h4><h4><%= @user.birthday %></h4>
+  <h4><span class="label label-info">Gender:</span></h4><h4><%= @user.gender %></h4>
+  <br>
 <% else %>
+
+
 <% end %>
 </div>
-<div class="col-xs-0 col-sm-3 col-md-3 col-lg-3">
+<div class="col-sm-3 col-md-3 col-lg-3">
 <div class='avatar-box'>
- <p><%= image_tag @user.image, class:"img-circle"%></p>
+
+<%if @user.image.length > 0%>
+	<p><%= image_tag @user.image, class:"img-circle"%></p>
+<%else%>
+	<%if @user.gender == 'female'%>
+	<p><%= image_tag "female_default.png", class:"img-circle"%></p>
+	<%else%>
+	<p><%= image_tag "male_default.png", class:"img-circle"%></p>
+	<%end%>
+<%end%>
  </div>
 </div>
 </div>
+
+<div class = "row">
+<div class="col-lg-12">
+<h3><span class="label label-primary">Tweet</span></h3>
+<hr>
+<%tweets = Tweet.where(user_id:@user.id)%>
+<%tweets.each do |tweet|%>
+<span class="label label-success"><%=tweet.time%></span>
+
+<%=tweet.content%>
+<br>
+<br>
+<%end%>
 </div>
+</div>
+
+
+
+<div class = "row">
+<div class="col-lg-12">
 <hr>
  <div class="text-center">
-
     <%=button_to "Delete",user_path(@user.id),:method => :delete, :class=>"btn btn-sm btn-danger"%>
+    </div>
+    </div>
+  </div>
   </div>

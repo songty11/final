@@ -1,3 +1,4 @@
+
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -11,34 +12,62 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_area :name %>
+  <div class = "row">
+<div class="col-sm-4 col-md-4 col-lg-4">
+<div class="input-group">
+  <span class="input-group-addon">
+    <%= f.label :name %></span>
+    <%= f.text_field :name ,class:"form-control"%>
+</div>
+  
+  <br>
+  <div class="input-group">
+  <span class="input-group-addon"">
+    <%= f.label :birthday %></span>
+    <%= f.text_field :birthday,class:"form-control"%>
   </div>
-  <div class="field">
-    <%= f.label :note %><br>
-    <%= f.text_area :note %>
+  <br>
+   <div class="input-group">
+  <span class="input-group-addon"">
+  <%= f.label :email %></span>
+   <%= f.text_field :email,class:"form-control"%>
+   </div>
+  <br>
+  <div class="input-group">
+  <span class="input-group-addon">
+     <%= f.label :gender %></span>
+   <%= f.select :gender, User::GENDER_TYPES,{}, {class:"form-control"}%> 
+</div>
+    <%= f.hidden_field :email%>
+
+ </div>
+  <div class="col-sm-5 col-md-5 col-lg-5">
   </div>
+ <div class="col-sm-3 col-md-3 col-lg-3">
+<div class='avatar-box'>
   <div class="field">
-    <%= f.label :image %><br>
-    <%= f.file_field :image %>
     <% if f.object.image? %>
-      <%= image_tag f.object.image.thumb.url %>
+      <%= image_tag f.object.image, class:"img-circle"%>
+      <%else %>
+        <%if @user.gender == 'female'%>
+          <p><%= image_tag "female_default.png", class:"img-circle"%></p>
+        <%else%>
+          <p><%= image_tag "male_default.png", class:"img-circle"%></p>
+        <%end%>
     <% end %>
+    <%= f.label :image, "Avatar" %><br>
+    <%= f.file_field :image %>
   </div>
-  <div class="field">
-    <%= f.label :gender %><br>
-    <%= f.text_field :gender %>
   </div>
-  <div class="field">
-    <%= f.label :birthday %><br>
-    <%= f.text_area :birthday %>
   </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_area :email %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <hr>
+  <div class = "row">
+   <div class="col-sm-12 col-md-12 col-lg-12">
+   <div class="text-center">
+    <%= f.submit "Update",class:"btn btn-default"%>
   </div>
+  </div>
+  </div>
+
 <% end %>

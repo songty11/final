@@ -2,6 +2,10 @@ class AlbumsController < ApplicationController
 skip_before_filter :verify_authenticity_token, :only => :create
 	def index
 		@albums = Album.all
+		if params[:keyword].present?
+     	 @albums = @albums.where("title LIKE ? OR year = ?",
+                                             "%#{params[:keyword]}%", params[:keyword])
+    end
 		@albums = @albums.limit(100)
 	end
 
@@ -18,7 +22,6 @@ skip_before_filter :verify_authenticity_token, :only => :create
 			@album = Album.new
 		    @album.title = params[:title]
 		    @album.image_url = params[:image_url]
-		    # @album.singer_id = params[:album][:singer_id]
 		    @album.year = params[:year]
 		    @album.popularity = params[:popularity]
 		    @album.total_tracks = params[:total_tracks]

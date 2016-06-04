@@ -3,10 +3,10 @@ Artist.delete_all
 Song.delete_all
 User.delete_all
 Toptrack.delete_all
+Tweet.delete_all
 
-
-User.create(name: 'Tianyu Song', image:"songty.jpg", email: 'songty@uchicago.edu', gender:'male',note:'I am smart!',birthday: '1993-03-08', password: 's5468279130', password_confirmation: 's5468279130')
-
+user = User.create(name: 'Tianyu Song', email: 'songty@uchicago.edu', gender:'male',birthday: '1993-03-08', password: 's5468279130', password_confirmation: 's5468279130')
+Tweet.create(content:"I am Smart!", user_id: user.id, time:"2016-06-03 21:29:24")
 
 # generated in python
 artist = Artist.create(name: 'Britney Spears', spotify_id: '26dSoYclwsYLMAKD3tpOr4', photo_url: 'https://i.scdn.co/image/f3f0e89644c30c96e50ddd483e3abedf744a460f')
@@ -38,6 +38,23 @@ Song.create(name: "I'll Never Stop Loving You", runtime: 221626, album_id: album
 Song.create(name: "Autumn Goodbye", runtime: 221040, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/473664a66738c813a449aa1afcc92b4fa758629b", popularity: 48)
 Song.create(name: "...Baby One More Time - Davidson Ospina Radio Mix", runtime: 204560, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/7968d695dabbeedf5a26dacb43041804957b27bd", popularity: 47)
 Song.create(name: "...Baby One More Time - Boy Wunder Radio Mix", runtime: 207066, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/01c90012bade9a136e2e9eab59226474ffb010c7", popularity: 65)
+album = Album.create(title: 'Britney Jean (Deluxe Version)',year: '2013-11-30',popularity: 69,image_url: 'https://i.scdn.co/image/24aa20220e7fec049c5fec81a45f316ef796c3bb',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '5rlB2HPoNHg2m1wmmh0TRv
+')
+Song.create(name: "Alien", runtime: 236000, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/4c8fa0412075b0269896859d73aff2be18ecc8d0", popularity: 58)
+Song.create(name: "Work B**ch", runtime: 247960, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/099a16ea80fddbd592595592c4587da4d0a923d2", popularity: 64)
+Song.create(name: "Perfume", runtime: 239973, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/ffab19e7295e5e7fd6665124ccf29a5292380356", popularity: 76)
+Song.create(name: "It Should Be Easy", runtime: 206586, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/504df3d827fcb3b1959987bb1c532c391986b517", popularity: 74)
+Song.create(name: "Tik Tik Boom", runtime: 176973, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/2e9de0fa63d1cf7922f253ab2465e32af2c487ee", popularity: 65)
+Song.create(name: "Body Ache", runtime: 205600, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/4e204ffa1dd285aa548bdccb17867c75995ec3cf", popularity: 52)
+Song.create(name: "Til It's Gone", runtime: 222640, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/f9c71d19ff44bc5eeb4c5a69f403577c668aebbe", popularity: 45)
+Song.create(name: "Passenger", runtime: 220120, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/21b3fc994e56ba31f39eb205009baa18ad305363", popularity: 58)
+Song.create(name: "Chillin' With You", runtime: 218346, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/61fb68568a54271ea0a3e9502f95fd997816432e", popularity: 84)
+Song.create(name: "Don't Cry", runtime: 194240, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/1fdd5dd24935d1eb13074ec05f8be572197f38ce", popularity: 52)
+Song.create(name: "Brightest Morning Star", runtime: 179800, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/38567d8c2f4ec78dcb918d5cb1acf8574c5cee0d", popularity: 56)
+Song.create(name: "Hold On Tight", runtime: 207280, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/4693c861a2eefa5cd5844132c4ca572b64b11834", popularity: 63)
+Song.create(name: "Now That I Found You", runtime: 256440, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/eea8dafda2f9f098e6688e2a7618e6e4b5052565", popularity: 64)
+Song.create(name: "Perfume (The Dreaming Mix)", runtime: 242466, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/0ec57b51b6938f01671f0faa69842637e5d79e5e", popularity: 84)
+
 
 
 artist = Artist.create(name: 'Avril Lavigne', spotify_id: '0p4nmQO2msCgU4IF37Wi3j', photo_url: 'https://i.scdn.co/image/5827a649441a605b62003c2beb758472b530de26')
@@ -95,33 +112,7 @@ Song.create(name: "Shattered", runtime: 233266, album_id: album.id, artist_id: a
 Song.create(name: "Undone", runtime: 254506, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/17055f118410de56cecd9806c0ff6dfde325265c", popularity: 86)
 
 
-artist = Artist.create(name: 'Britney Spears', spotify_id: '26dSoYclwsYLMAKD3tpOr4', photo_url: 'https://i.scdn.co/image/f3f0e89644c30c96e50ddd483e3abedf744a460f')
-Toptrack.create(name: "...Baby One More Time", preview_url:"https://p.scdn.co/mp3-preview/da2134a161f1cb34d17c2d6d7e77cc93d1c1e6f7", artist_id:artist.id)
-Toptrack.create(name: "Womanizer", preview_url:"https://p.scdn.co/mp3-preview/40c87bb00fe6bab71f758643b2d1e598c5374410", artist_id:artist.id)
-Toptrack.create(name: "Oops!...I Did It Again", preview_url:"https://p.scdn.co/mp3-preview/7fb86827422540ad01f65870375fef055412f034", artist_id:artist.id)
-Toptrack.create(name: "Work B**ch", preview_url:"https://p.scdn.co/mp3-preview/099a16ea80fddbd592595592c4587da4d0a923d2", artist_id:artist.id)
-Toptrack.create(name: "Toxic", preview_url:"https://p.scdn.co/mp3-preview/54b4db0823ebada52e42ab50fa34c547a6c63b61", artist_id:artist.id)
-Toptrack.create(name: "Pretty Girls", preview_url:"https://p.scdn.co/mp3-preview/6347f175c303b6a840dbc064f6f9bd277c702d59", artist_id:artist.id)
-Toptrack.create(name: "Till the World Ends", preview_url:"https://p.scdn.co/mp3-preview/fd017ae5c0a60cff3d5f5b4d37c4e8617c93b11f", artist_id:artist.id)
-Toptrack.create(name: "Circus", preview_url:"https://p.scdn.co/mp3-preview/8085b6ee836e9cbb7032576fcf8f1b51d9a53c0d", artist_id:artist.id)
-Toptrack.create(name: "Gimme More", preview_url:"https://p.scdn.co/mp3-preview/933d11a18d0ec4884f4a9620f4d628a7295e8faf", artist_id:artist.id)
-Toptrack.create(name: "Piece of Me", preview_url:"https://p.scdn.co/mp3-preview/2ece5b2602fdaa7a69643e8729d96ae9c73b19a8", artist_id:artist.id)
-album = Album.create(title: 'Britney Jean (Deluxe Version)',year: '2013-11-30',popularity: 69,image_url: 'https://i.scdn.co/image/24aa20220e7fec049c5fec81a45f316ef796c3bb',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '5rlB2HPoNHg2m1wmmh0TRv
-')
-Song.create(name: "Alien", runtime: 236000, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/4c8fa0412075b0269896859d73aff2be18ecc8d0", popularity: 58)
-Song.create(name: "Work B**ch", runtime: 247960, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/099a16ea80fddbd592595592c4587da4d0a923d2", popularity: 64)
-Song.create(name: "Perfume", runtime: 239973, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/ffab19e7295e5e7fd6665124ccf29a5292380356", popularity: 76)
-Song.create(name: "It Should Be Easy", runtime: 206586, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/504df3d827fcb3b1959987bb1c532c391986b517", popularity: 74)
-Song.create(name: "Tik Tik Boom", runtime: 176973, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/2e9de0fa63d1cf7922f253ab2465e32af2c487ee", popularity: 65)
-Song.create(name: "Body Ache", runtime: 205600, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/4e204ffa1dd285aa548bdccb17867c75995ec3cf", popularity: 52)
-Song.create(name: "Til It's Gone", runtime: 222640, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/f9c71d19ff44bc5eeb4c5a69f403577c668aebbe", popularity: 45)
-Song.create(name: "Passenger", runtime: 220120, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/21b3fc994e56ba31f39eb205009baa18ad305363", popularity: 58)
-Song.create(name: "Chillin' With You", runtime: 218346, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/61fb68568a54271ea0a3e9502f95fd997816432e", popularity: 84)
-Song.create(name: "Don't Cry", runtime: 194240, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/1fdd5dd24935d1eb13074ec05f8be572197f38ce", popularity: 52)
-Song.create(name: "Brightest Morning Star", runtime: 179800, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/38567d8c2f4ec78dcb918d5cb1acf8574c5cee0d", popularity: 56)
-Song.create(name: "Hold On Tight", runtime: 207280, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/4693c861a2eefa5cd5844132c4ca572b64b11834", popularity: 63)
-Song.create(name: "Now That I Found You", runtime: 256440, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/eea8dafda2f9f098e6688e2a7618e6e4b5052565", popularity: 64)
-Song.create(name: "Perfume (The Dreaming Mix)", runtime: 242466, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/0ec57b51b6938f01671f0faa69842637e5d79e5e", popularity: 84)
+
 
 
 artist = Artist.create(name: 'Two Steps from Hell', spotify_id: '2qvP9yerCZCS0U1gZU8wYp', photo_url: 'https://i.scdn.co/image/12b30b31d8cf732ae20552f17bb8dda4e817658e')
