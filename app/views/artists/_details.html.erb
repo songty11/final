@@ -9,7 +9,10 @@
   <div class="row">
     <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 sidebar">
       <p><%= image_tag @artist.photo_url, class: 'img-circle artist-photo' %></p> 
-      <h4 class = "text-center">Top 10 Tracks</h4>
+      <h3 class = "text-center"> <span class="label label-warning">
+      Top 10 Tracks
+      </span>
+      </h3>
       <hr>
       <%tracks = Toptrack.where(artist_id: @artist.id)%>
       <ul>

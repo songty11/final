@@ -5,8 +5,21 @@ User.delete_all
 Toptrack.delete_all
 Tweet.delete_all
 
-user = User.create(name: 'Tianyu Song', email: 'songty@uchicago.edu', gender:'male',birthday: '1993-03-08', password: 's5468279130', password_confirmation: 's5468279130')
+user = User.create(name: 'Tianyu Song', email: 'songty@uchicago.edu', gender:'Male',birthday: '1993-03-08', password: 's5468279130', password_confirmation: 's5468279130')
 Tweet.create(content:"I am Smart!", user_id: user.id, time:"2016-06-03 21:29:24")
+Tweet.create(content:"Web development is the best course I have ever taken!", user_id: user.id, time:"2016-06-04 21:29:24")
+
+user = User.create(name: 'Jason', email: 'jason@uchicago.edu', gender:'Female',birthday: '1995-05-08', password: 'jason', password_confirmation: 'jason')
+Tweet.create(content:"I love Jason Mraz!", user_id: user.id, time:"2015-04-02 21:12:24")
+
+user = User.create(name: 'Britney', email: 'britney@uchicago.edu', gender:'Female',birthday: '1992-01-09', password: 'britney', password_confirmation: 'britney')
+Tweet.create(content:"Britney is so sexy!", user_id: user.id, time:"2016-06-03 18:10:11")
+
+user = User.create(name: 'Bran', email: 'bran@uchicago.edu', gender:'Male',birthday: '1989-01-012', password: 'bran', password_confirmation: 'bran')
+Tweet.create(content:"I don't like music....", user_id: user.id, time:"2012-02-02 22:22:22")
+
+user = User.create(name: 'Jack', email: 'jack@uchicago.edu', gender:'Male',birthday: '1967-09-20', password: 'jack', password_confirmation: 'jack')
+Tweet.create(content:"Wow, what a wonderful place.", user_id: user.id, time:"2011-01-11 11:12:34")
 
 # generated in python
 artist = Artist.create(name: 'Britney Spears', spotify_id: '26dSoYclwsYLMAKD3tpOr4', photo_url: 'https://i.scdn.co/image/f3f0e89644c30c96e50ddd483e3abedf744a460f')
@@ -22,6 +35,7 @@ Toptrack.create(name: "Gimme More", preview_url:"https://p.scdn.co/mp3-preview/9
 Toptrack.create(name: "Piece of Me", preview_url:"https://p.scdn.co/mp3-preview/2ece5b2602fdaa7a69643e8729d96ae9c73b19a8", artist_id:artist.id)
 album = Album.create(title: '...Baby One More Time (Digital Deluxe Version)',year: '1999',popularity: 72,image_url: 'https://i.scdn.co/image/cd755b462e6a9767e7484432646212f2a5f850d7',artist_id: artist.id ,album_type: 'album',total_tracks: 7,spotify_id: '3WNxdumkSMGMJRhEgK80qx
 ')
+
 Song.create(name: "...Baby One More Time", runtime: 211066, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/da2134a161f1cb34d17c2d6d7e77cc93d1c1e6f7", popularity: 83)
 Song.create(name: "(You Drive Me) Crazy", runtime: 198066, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/2a8aad406e16c4d52a9850de54a02efe5f1ee2ff", popularity: 55)
 Song.create(name: "Sometimes", runtime: 245066, album_id: album.id, artist_id: artist.id, preview_url:"https://p.scdn.co/mp3-preview/66534231ccdd99619485b6ea4fa90987322dd812", popularity: 71)
