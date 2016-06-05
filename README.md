@@ -1,4 +1,16 @@
-# final
+# Final
+
+##To run this Rails app on your laptop:
+
+1. Clone this repository
+2. bundle install
+3. rake db:migrate rake db:seed
+4. rails server
+
+In case of failure of uploading avatar, try to run:
+
+*brew install graphicsmagick #(os x)
+*sudo apt-get install libmagickwand-dev #(ubuntu)
 
 This is a music resource website.
 
