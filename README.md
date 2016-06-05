@@ -33,6 +33,10 @@ In case of failure of uploading avatar, try to run:
 * brew install graphicsmagick #(os x)
 * sudo apt-get install libmagickwand-dev #(ubuntu)
 
+For test, you could use following account:
+* email: jack@uchicago.edu
+* password: jack
+
 ##Public Url:
 https://songtywebdev.herokuapp.com/
 
