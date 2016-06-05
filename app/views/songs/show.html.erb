@@ -1,4 +1,10 @@
 
+
+<script>
+	var player = document.createElement('AUDIO');
+	var isPlaying = false;
+</script>
+
 <h1 class='page-header'><%= @song.name%></h1>
 
 <%artist = Artist.find_by(id:@song.artist_id)%>
@@ -12,6 +18,32 @@
   <p><strong><span class="label label-info"> Runtime:</span></strong>  <%= @song.runtime/60000%>: <%= (@song.runtime%60000)/1000%> min</p>
   <p><strong><span class="label label-info">Popularity:</span></strong> <%= @song.popularity%></p>
   <hr>
+
 <div class = "text-center">
-<button type="button" class="btn btn-lg btn-success">Play</button>
+<button type="button" class="btn btn-lg btn-success" onclick="playAudio()">Play</button>
 </div>
+
+<script>
+// $(".my_audio").trigger('load');
+	function playAudio(){
+		if(isPlaying)
+		{
+			player.pause()
+			isPlaying = false;
+		}
+		else
+		{
+			player.src = '<%=@song.preview_url%>';
+			player.play();
+			isPlaying = true;
+		}
+	}
+
+	window.onbeforeunload = function(){
+		if(isPlaying)
+		{
+			player.pause();
+		}
+	}
+
+</script>

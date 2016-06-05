@@ -2,11 +2,13 @@ class AlbumsController < ApplicationController
 skip_before_filter :verify_authenticity_token, :only => :create
 	def index
 		@albums = Album.all
+		
 		if params[:keyword].present?
      	 @albums = @albums.where("title LIKE ? OR year = ?",
                                              "%#{params[:keyword]}%", params[:keyword])
-    end
+    	end
 		@albums = @albums.limit(100)
+		@albums = @albums.shuffle
 	end
 
 	def show

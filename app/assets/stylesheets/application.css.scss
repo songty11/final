@@ -30,6 +30,24 @@ body {
   width: 230px;
   height: 230px;
 }
+.album-box-noshadow {
+  float: left;
+  width: 280px;
+  height: 280px;
+  padding: 20px;
+  padding-left: 0px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.album-box-noshadow img {
+  text-align: center;
+  margin: auto auto;
+  display: block;
+  width: 230px;
+  height: 230px;
+}
 .spotify-box {
   float: left;
   width: 310px;

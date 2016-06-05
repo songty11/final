@@ -3,4 +3,10 @@
  <%= render 'album', album: nil %>
  <%end%>
 <%= render @albums %>
-
+<%if @albums.count > 0%>
+<div class="album-box-noshadow">
+<ul>
+<%= link_to image_tag("pick.jpg"), album_url(@albums.sample)%>
+</ul>
+</div>
+<%end%>
