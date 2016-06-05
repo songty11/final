@@ -1,7 +1,8 @@
 class ArtistsController < ApplicationController
 
   def index
-     @artists = Artist.all
+
+     @artists = Artist.order('id ASC').reorder('name ASC')
      if params[:keyword].present?
        @artists = @artists.where("name LIKE ?","%#{params[:keyword]}%")
      end

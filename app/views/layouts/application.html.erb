@@ -61,12 +61,15 @@
 
 
 <div class="container">
+
 <% flash.each do |key, value| %>
+
   <%if key=='notice'%>
   <div class="alert alert-success"><%= value %></div>
   <%else%>
     <div class="alert alert-<%= key %>"><%= value %></div>
   <%end%>
+  
 <% end %>
 
 <%= yield %>

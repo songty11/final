@@ -3,6 +3,8 @@
 
 <%= render 'details' %>
 
+ <% if session["user_id"].present? and User.find_by(id: session["user_id"])!=nil%>
  <div class="text-center">
     <%=button_to "Delete",album_path(@album.id),:method => :delete, :class=>"btn btn-sm btn-danger"%>
   </div>
+  <%end%>
