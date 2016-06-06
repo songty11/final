@@ -40,6 +40,8 @@ For test, you could use following account:
 ##Public Url:
 https://songtywebdev.herokuapp.com/
 
+(could be slow at your first lauch, as I am a free user of heroku)
+
 ##Features:
 1. The app has been deployed to a public url via heroku.
 2. The app is designed in Bootstrap CSS framework.
